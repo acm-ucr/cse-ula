@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "ULA Website",
-  description: "Created by ACM@UCR",
+  description:
+    "Improving the learning experience of students in core CS courses!",
 };
 
 type LayoutProps = {
