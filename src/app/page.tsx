@@ -1,9 +1,5 @@
 const Home = () => {
-  return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      Hello World
-    </div>
-  );
+  return <div className="text-center text-2xl">Hello ULA</div>;
 };
 
 export default Home;
