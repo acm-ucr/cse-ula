@@ -1,8 +1,11 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Fira_Sans } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
 
-const inter = Inter({ subsets: ["latin"] });
+const firaSans = Fira_Sans({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 export const metadata = {
   title: "ULA Website",
@@ -17,7 +20,7 @@ type LayoutProps = {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={firaSans.className}>
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
       </body>
     </html>
