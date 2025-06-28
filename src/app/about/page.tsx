@@ -8,11 +8,11 @@ const About = () => {
   return (
     <div>
       About
-      <OurGoals/>
-      <Progress/>
-      <Professor/>
-      <CourseOfferings/>
-      <Citations/>
+      <OurGoals />
+      <Progress />
+      <Professor />
+      <CourseOfferings />
+      <Citations />
     </div>
   );
 };

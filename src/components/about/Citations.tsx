@@ -1,4 +1,4 @@
 const Citations = () => {
-    return <div className="">Citations</div>;
+  return <div className="">Citations</div>;
 };
 export default Citations;
