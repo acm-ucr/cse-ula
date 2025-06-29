@@ -1,7 +1,7 @@
 import Image from "next/image";
 import RiversideLogo from "@/public/riversideLogo.webp";
 import { FaDiscord } from "react-icons/fa";
-import Link from "next/link"
+import Link from "next/link";
 const Footer = () => {
   return (
     <div className="flex justify-between bg-ula-blue-primary p-10 text-white">
