@@ -2,11 +2,7 @@
 import ErrorMessage from "@/components/ErrorMessage";
 
 const Error = () => {
-  return (
-    <div>
-      <ErrorMessage message="500 Error" />
-    </div>
-  );
+  return <ErrorMessage message="500 Error" />;
 };
 
 export default Error;

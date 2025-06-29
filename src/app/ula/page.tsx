@@ -1,4 +1,4 @@
-import ULAs from "@/components/ula/ULAMapping";
+import ULAs from "@/components/ula/OurULAS";
 const ULA = () => {
   return (
     <div>
