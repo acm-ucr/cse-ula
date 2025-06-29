@@ -12,9 +12,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex items-center gap-4">
-        <div className="border-r-2 p-4 text-2xl font-bold">
-          WCH Room 129
-        </div>
+        <div className="border-r-2 p-4 text-2xl font-bold">WCH Room 129</div>
         <Link href="https://discord.com/invite/BUvwNdB6eH">
           <FaDiscord size={50} />
         </Link>
