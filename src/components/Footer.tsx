@@ -4,7 +4,7 @@ import { FaDiscord } from "react-icons/fa";
 import Link from "next/link";
 const Footer = () => {
   return (
-    <div className="flex justify-between bg-ula-blue-primary p-10 text-white">
+    <div className="flex justify-between bg-ula-blue-primary p-10 text-white items-center">
       <div className="flex flex-col items-center justify-center">
         <Image src={RiversideLogo} alt="Logo of UCR" />
         <div className="w-3/4 text-center text-xl">
