@@ -5,10 +5,10 @@ module.exports = {
     extend: {
       colors: {
         ula: {
-          "blue-primary": "#003DA5",
-          "yellow-primary": "#FFB81C",
-          "blue-accent": "#45ABFF",
-          "yellow-accent": "#FBC754",
+          "blue-accent": "#003DA5",
+          "yellow-accent": "#FFB81C",
+          "blue-primary": "#45ABFF",
+          "yellow-primary": "#FBC754",
         },
       },
     },
