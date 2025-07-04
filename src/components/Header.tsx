@@ -4,7 +4,7 @@ interface HeaderProps {
 
 const Header = ({ text }: HeaderProps) => {
   return (
-    <div className="text-center text-5xl font-extrabold text-ula-blue-primary">
+    <div className="text-center text-5xl font-bold text-ula-blue-primary">
       {text}
     </div>
   );
