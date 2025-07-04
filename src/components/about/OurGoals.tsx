@@ -1,6 +1,6 @@
 import OurGoalsProps from "@/components/about/OurGoalsProps";
-import myImage from "@/public/image.jpg";
+import Book from "@/public/about/book.svg";
 const OurGoals = () => {
-  return <OurGoalsProps image={myImage} text="placeholder" />;
+  return <OurGoalsProps image={Book} text="Improve the learning experience of students in core CS courses" />;
 };
 export default OurGoals;
