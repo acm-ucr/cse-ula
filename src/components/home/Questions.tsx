@@ -1,10 +1,10 @@
-import InfoButton from "@/components/home/InfoButton"
+import InfoButton from "@/components/home/InfoButton";
 const Questions = () => {
   return (
-  <div className="">
-    Questions
-    <InfoButton/>
-  </div>
+    <div className="">
+      Questions
+      <InfoButton />
+    </div>
   );
 };
 export default Questions;
