@@ -1,7 +1,6 @@
 const Example = (props: { text1: string; text2: string; text3: string }) => {
   return (
-    // added flex-col to first div and stack of divs
-    <div className="flex w-2/3 flex-col items-center gap-12 rounded-md bg-red-200 p-10">
+    <div className="flex w-2/3 flex-col items-center gap-12 rounded-md bg-red-200 p-8">
       <div className="w-1/2 bg-ula-blue-primary p-5 text-center text-white">
         {props.text1}
       </div>
