@@ -1,5 +1,5 @@
 import Image from "next/image";
-import buttonArrow from "@/public/ButtonArrow.svg";
+import buttonArrow from "public/ButtonArrow.svg";
 
 const Button = (props: { text1: string }) => {
   return (
