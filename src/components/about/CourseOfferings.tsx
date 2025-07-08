@@ -1,4 +1,5 @@
+import CourseOfferingCard from "@/components/about/CourseOfferingCard";
 const CourseOfferings = () => {
-  return <div className="">CourseOfferings</div>;
+  return <CourseOfferingCard course="9 series" />;
 };
 export default CourseOfferings;
