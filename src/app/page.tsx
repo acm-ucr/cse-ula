@@ -1,11 +1,10 @@
-import Example from "@/components/Example";
+import Professor from "@/components/about/Professor";
 
-const Home = () => {
+export default function AboutPage() {
   return (
-    <div className="flex h-screen w-screen items-center justify-center text-center text-2xl">
-      <Example text1="Adjust" text2="These" text3="Props" />
-    </div>
+    <main className="p-6">
+      <h1 className="mb-6 text-2xl font-bold">ULA Professor component/card</h1>
+      <Professor />
+    </main>
   );
-};
-
-export default Home;
+}
