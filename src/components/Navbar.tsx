@@ -1,4 +1,36 @@
+"use client";
+import Link from "next/link";
+import { items } from "@/data/NavbarData";
+import { usePathname } from "next/navigation";
+import { FaDiscord } from "react-icons/fa";
+
 const Navbar = () => {
-  return <div className="">Navbar</div>;
+  const pathname = usePathname();
+
+  return (
+    <div className="flex w-full items-center justify-between bg-ula-blue-primary font-medium px-5 py-4">
+      <div className="mx-5 grid grid-flow-col gap-10 text-2xl text-white">
+        {items.map(({ name, link }) => (
+          <Link
+            key={name}
+            href={link}
+            className={`${
+              pathname === link ? "text-[#F7C55B]" : "hover:text-gray-300"
+            }`}
+          >
+            {name}
+          </Link>
+          
+        ))}
+      </div>
+      <div className="mx-5">
+        <Link href="https://discord.com/invite/BUvwNdB6eH" target="_blank" rel="noopener noreferrer">
+          <span className="text-white hover:text-gray-300 text-4xl">
+            <FaDiscord />
+          </span>
+        </Link>
+      </div>
+    </div>
+  );
 };
 export default Navbar;
