@@ -8,7 +8,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="flex w-full items-center justify-between bg-ula-blue-primary font-medium px-5 py-4">
+    <div className="flex w-full items-center justify-between bg-ula-blue-primary px-5 py-4 font-medium">
       <div className="mx-5 grid grid-flow-col gap-10 text-2xl text-white">
         {items.map(({ name, link }) => (
           <Link
@@ -20,12 +20,15 @@ const Navbar = () => {
           >
             {name}
           </Link>
-          
         ))}
       </div>
       <div className="mx-5">
-        <Link href="https://discord.com/invite/BUvwNdB6eH" target="_blank" rel="noopener noreferrer">
-          <span className="text-white hover:text-gray-300 text-4xl">
+        <Link
+          href="https://discord.com/invite/BUvwNdB6eH"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="text-4xl text-white hover:text-gray-300">
             <FaDiscord />
           </span>
         </Link>
