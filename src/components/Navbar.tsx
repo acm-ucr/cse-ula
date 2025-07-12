@@ -26,9 +26,8 @@ const Navbar = () => {
         <Link
           href="https://discord.com/invite/BUvwNdB6eH"
           target="_blank"
-          rel="noopener noreferrer"
         >
-          <span className="text-4xl text-white hover:text-gray-300">
+          <span className="text-5xl text-white hover:text-gray-300">
             <FaDiscord />
           </span>
         </Link>
