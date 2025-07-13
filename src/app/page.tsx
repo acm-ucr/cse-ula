@@ -6,7 +6,7 @@ import Testimony from "@/components/home/Testimony";
 
 const Home = () => {
   return (
-    <div className="">
+    <div>
       <Landing />
       <HelpInCourses />
       <Location />
