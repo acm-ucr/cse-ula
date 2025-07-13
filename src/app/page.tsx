@@ -1,15 +1,17 @@
-import Example from "@/components/Example";
-import Button from "@/components/Button";
+import Landing from "@/components/home/Landing";
+import HelpInCourses from "@/components/home/HelpInCourses";
+import Location from "@/components/home/Location";
+import Questions from "@/components/home/Questions";
+import Testimony from "@/components/home/Testimony";
 
 const Home = () => {
   return (
     <div>
-      <div className="flex h-screen w-screen items-center justify-center text-center text-2xl">
-        <Example text1="Adjust" text2="These" text3="Props" />
-      </div>
-      <div className="mb-4 mr-2 flex items-center justify-end text-center text-2xl">
-        <Button text="Get help here!" />
-      </div>
+      <Landing />
+      <HelpInCourses />
+      <Location />
+      <Questions />
+      <Testimony />
     </div>
   );
 };
