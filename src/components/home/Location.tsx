@@ -7,7 +7,7 @@ const Location = (props: { mapText: string }) => {
       <>
         <Image src={ulaMap} alt={"ulaMap"} />
       </>
-      <div className="flex items-center justify-center bg-transparent text-center text-white p-f">
+      <div className="p-f flex items-center justify-center bg-transparent text-center text-white">
         {props.mapText}
       </div>
     </div>
