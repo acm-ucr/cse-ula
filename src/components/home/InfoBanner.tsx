@@ -4,7 +4,7 @@ const InfoBanner = () => {
   return (
     <div className="">
       InfoBanner
-      <Location mapText="Find us at Room 129 on WCH Floor 1!" />
+      <Location />
     </div>
   );
 };
