@@ -1,6 +1,6 @@
-import CatOne from "@/public/demo/cat1.png";
-import CatTwo from "@/public/demo/cat2.png";
-import CatThree from "@/public/demo/cat3.png";
+import CatOne from "@/public/demo/cat1.webp";
+import CatTwo from "@/public/demo/cat2.webp";
+import CatThree from "@/public/demo/cat3.webp";
 
 export const CatInfo = [
   {
