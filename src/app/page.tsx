@@ -8,7 +8,7 @@ const Home = () => {
         <Example text1="Adjust" text2="These" text3="Props" />
       </div>
       <div className="mb-4 mr-2 flex items-center justify-end text-center text-2xl">
-        <Button text1="Get help here!" />
+        <Button text="Get help here!" />
       </div>
     </div>
   );
