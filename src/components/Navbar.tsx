@@ -15,7 +15,9 @@ const Navbar = () => {
             key={name}
             href={link}
             className={`${
-              pathname === link ? "text-[#F7C55B]" : "hover:text-gray-300"
+              pathname === link
+                ? "text-ula-yellow-accent"
+                : "hover:text-gray-300"
             }`}
           >
             {name}
@@ -24,9 +26,9 @@ const Navbar = () => {
       </div>
       <div className="mx-5">
         <Link href="https://discord.com/invite/BUvwNdB6eH" target="_blank">
-          <span className="text-5xl text-white hover:text-gray-300">
+          <div className="text-5xl text-white">
             <FaDiscord />
-          </span>
+          </div>
         </Link>
       </div>
     </div>
