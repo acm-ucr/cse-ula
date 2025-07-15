@@ -7,7 +7,6 @@ import Citations from "@/components/about/Citations";
 const About = () => {
   return (
     <div>
-      About
       <OurGoals />
       <Progress />
       <Professor />
