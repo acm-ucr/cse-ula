@@ -1,17 +1,21 @@
+import Image from 'next/image';
+
 const Professor = () => {
   return (
-    <div className="flex-col bg-white px-3 py-2">
-      <p className="font-medium text-black underline decoration-blue-500 decoration-2">
+    <div className="flex flex-col bg-white py-10 px-4 items-center   ">
+      <Image src="/about/watkinsonMedina.webp" alt="Professor Watkinson Medina"          
+        width={200}
+        height={200}
+        className="mb-6 rounded-sm object-cover" />
+     <div className="max-w-2xl text-center">
+      <p className="text-lg font-medium text-black leading-relaxed">
         "The ULA program is a great chance to make a real difference.
-        <br />
-        Students get more personalized learning that helps with their classes,{" "}
-        <br />
-        and ULAs get to grow as educators. All in all, the ULA program is a{" "}
-        <br />
-        good thing for everyone who's part of it."
+        Students get more personalized learning that helps with their classes, and ULAs get to grow as educators. All in all, the ULA program is a good thing for everyone who's part of it."
       </p>
-      <p className="text-right font-medium">-Professor watkinson medina</p>
+      <p className="mt-2 text-right font-medium">-Professor Watkinson Medina</p>
+    </div>
     </div>
   );
 };
 export default Professor;
+
