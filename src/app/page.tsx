@@ -1,10 +1,18 @@
-import Professor from "@/components/about/Professor";
+import Landing from "@/components/home/Landing";
+import HelpInCourses from "@/components/home/HelpInCourses";
+import Location from "@/components/home/Location";
+import Questions from "@/components/home/Questions";
+import Testimony from "@/components/home/Testimony";
+
 
 const Home = () => {
   return (
-    <div className="p-6">
-      <h1 className="mb-6 text-xl font-bold">ULA Professor text component</h1>
-      <Professor />
+    <div>
+      <Landing />
+      <HelpInCourses />
+      <Location />
+      <Questions />
+      <Testimony />
     </div>
   );
 };
