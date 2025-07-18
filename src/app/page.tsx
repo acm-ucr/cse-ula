@@ -4,7 +4,6 @@ import Location from "@/components/home/Location";
 import Questions from "@/components/home/Questions";
 import Testimony from "@/components/home/Testimony";
 
-
 const Home = () => {
   return (
     <div>
