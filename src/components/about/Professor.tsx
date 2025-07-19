@@ -3,7 +3,7 @@ import professorImage from "@/public/about/watkinsonMedina.webp";
 
 const Professor = () => {
   return (
-    <div className="mx-8 flex items-center gap-8 bg-white">
+    <div className="mx-8 flex items-center gap-8">
       <Image
         src={professorImage}
         alt="Professor Watkinson Medina"
