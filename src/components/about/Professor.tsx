@@ -1,24 +1,23 @@
 import Image from "next/image";
+import professorImage from "@/public/about/watkinsonMedina.webp";
 
 const Professor = () => {
   return (
-    <div className="flex flex-col items-center bg-white px-4 py-10">
+    <div className="mx-8 flex items-center gap-8 bg-white">
       <Image
-        src="/about/watkinsonMedina.webp"
+        src={professorImage}
         alt="Professor Watkinson Medina"
-        width={200}
-        height={200}
-        className="mb-6 rounded-sm object-cover"
+        className="mb-6 w-1/5 rounded-md"
       />
-      <div className="max-w-2xl text-center">
-        <p className="text-lg font-medium leading-relaxed text-black">
+      <div className="w-4/5">
+        <p className="text-xl font-medium text-black">
           "The ULA program is a great chance to make a real difference. Students
           get more personalized learning that helps with their classes, and ULAs
           get to grow as educators. All in all, the ULA program is a good thing
           for everyone who's part of it."
         </p>
         <p className="mt-2 text-right font-medium">
-          -Professor Watkinson Medina
+          - Professor Watkinson Medina
         </p>
       </div>
     </div>
