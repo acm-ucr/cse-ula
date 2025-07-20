@@ -10,10 +10,15 @@ const CourseOfferings = () => {
         <div className="text-7xl font-bold text-ula-blue-primary">
           Course Offerings
         </div>
-        <div className="mx-64 py-10 text-center text-3xl leading-loose">
-          Our ULAs are here to support you through office hours, and directly in
-          lab sections. Starting Week 2 of each quarter, each class listed below
-          will have one or more ULAs there to offer you direct assistance!
+        <div className="mx-64 py-10 text-center text-3xl">
+          <div className="pb-4">
+            Our ULAs are here to support you through office hours, and directly
+            in lab sections.
+          </div>
+          <div>
+            Starting Week 2 of each quarter, each class listed below will have
+            one or more ULAs there to offer you direct assistance!
+          </div>
         </div>
       </div>
       <div className="mb-10 flex justify-center gap-x-10 px-64">
