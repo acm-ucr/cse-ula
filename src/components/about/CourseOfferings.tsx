@@ -31,7 +31,7 @@ const CourseOfferings = () => {
           <div key={index} className="flex w-[22%] justify-center">
             <CourseOfferingCard
               course={course.course}
-              color={(index + 4) % 2 === 0 ? "blue" : "yellow"}
+              color={(index + 4) % 2 != 0 ? "blue" : "yellow"}
             />
           </div>
         ))}
