@@ -10,7 +10,7 @@ const CourseOfferings = () => {
         <div className="text-7xl font-bold text-ula-blue-primary">
           Course Offerings
         </div>
-        <div className="mx-80 py-10 text-center text-3xl">
+        <div className="mx-72 py-10 text-center text-3xl">
           <div className="pb-4">
             Our ULAs are here to support you through office hours, and directly
             in lab sections.
