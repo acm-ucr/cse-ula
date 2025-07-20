@@ -4,7 +4,7 @@ import Button from "@/components/Button";
 
 const Location = () => {
   return (
-    <div className="py-1/2 flex w-full flex-row items-center justify-evenly bg-ula-blue-primary p-6">
+    <div className="flex w-full flex-row items-center justify-evenly bg-ula-blue-primary p-1">
       <div className="flex w-1/2 flex-col items-center justify-center gap-8 bg-transparent p-6">
         <div className="flex w-4/5 items-center justify-center bg-transparent text-left text-lg leading-loose tracking-wide text-white">
           Your friendly neighborhood ULAs are ready to help! Just drop in to one
