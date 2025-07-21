@@ -16,8 +16,9 @@ const Card = () => {
       className="relative m-4 flex cursor-pointer flex-col items-center"
       style={{ transformStyle: "preserve-3d" }}
     >
-      <div className="flex w-1/5 flex-col overflow-hidden rounded-xl" 
-      style={{ backfaceVisibility: "hidden", transform: "rotateY(0deg)" }}
+      <div
+        className="flex w-1/5 flex-col overflow-hidden rounded-xl"
+        style={{ backfaceVisibility: "hidden", transform: "rotateY(0deg)" }}
       >
         <div className="aspect-[4/3]">
           <Image
