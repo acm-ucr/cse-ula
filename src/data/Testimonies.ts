@@ -1,4 +1,4 @@
-export const Testimonies = [
+export const testimonies = [
   {
     name: "Copy Kurpanek",
     quote:
@@ -22,7 +22,7 @@ export const Testimonies = [
   {
     name: "Russel Villanueva",
     quote:
-      "In my three years with ULA, the ULA tutors have been some of the most helpful people I've met. They've helped me grow into a better, more confidend coder, and I truly couldn't have passed 10C without them. Also, ULA isn't just a place for learning but it's a commuinity where you meet people who share your interests and understand your struggles with CS. Some of the tutors I've met eventually became close friends, and I wouldn't have met them if it weren't for this program.",
+      "In my three years with ULA, the ULA tutors have been some of the most helpful people I've met. They've helped me grow into a better, more confident coder, and I truly couldn't have passed 10C without them. Also, ULA isn't just a place for learning but it's a commuinity where you meet people who share your interests and understand your struggles with CS. Some of the tutors I've met eventually became close friends, and I wouldn't have met them if it weren't for this program.",
   },
   {
     name: "Phillip Chin",
