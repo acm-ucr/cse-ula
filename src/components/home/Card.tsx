@@ -8,7 +8,7 @@ interface componentProps {
 
 const Card = ({ name, quote }: componentProps) => {
   return (
-    <div className="mx-auto flex w-1/2 flex-col place-items-center justify-evenly rounded-xl bg-white p-8 shadow-xl">
+    <div className="mx-auto flex w-2/3 flex-col place-items-center justify-evenly rounded-xl bg-white p-8 shadow-xl">
       <div className="place-items-center p-1">
         <Image src={quoteIcon} className="w-3/4" alt="quoteIcon" />
       </div>
