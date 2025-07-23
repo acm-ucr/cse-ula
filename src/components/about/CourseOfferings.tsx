@@ -1,29 +1,26 @@
 import CourseOfferingCard from "@/components/about/CourseOfferingCard";
+import Header from "@/components/Header";
 import { Courses } from "@/data/CourseOfferings";
 
 const CourseOfferings = () => {
   const firstRow = Courses.slice(0, 4);
   const secondRow = Courses.slice(4, 7);
   return (
-    <div className="py-20">
-      <div className="flex w-full flex-col items-center justify-center">
-        <div className="text-7xl font-bold text-ula-blue-primary">
-          Course Offerings
-        </div>
-        <div className="mx-72 py-10 text-center text-3xl">
-          <div className="pb-4">
-            Our ULAs are here to support you through office hours, and directly
-            in lab sections.
-          </div>
-          <div>
-            Starting Week 2 of each quarter, each class listed below will have
-            one or more ULAs there to offer you direct assistance!
-          </div>
-        </div>
+    <div className="mb-6 flex w-full flex-col items-center justify-center bg-ula-blue-highlight py-8">
+      <Header text="Course Offerings" />
+      <div className="w-2/3 flex-col place-items-center py-10 text-center text-xl">
+        <p className="pb-4">
+          Our ULAs are here to support you through office hours, and directly in
+          lab sections.
+        </p>
+        <p>
+          Starting Week 2 of each quarter, each class listed below will have one
+          or more ULAs there to offer you direct assistance!
+        </p>
       </div>
-      <div className="mb-10 flex justify-center gap-x-10 px-64">
+      <div className="mx-auto mb-8 flex w-2/3 justify-center gap-x-8">
         {firstRow.map((course, index) => (
-          <div key={index} className="flex w-[22%] justify-center">
+          <div key={index} className="flex w-1/4 justify-center">
             <CourseOfferingCard
               course={course.course}
               color={index % 2 === 0 ? "blue" : "yellow"}
@@ -31,9 +28,9 @@ const CourseOfferings = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-center gap-x-10 px-64">
+      <div className="mx-auto flex w-1/2 justify-center gap-x-8">
         {secondRow.map((course, index) => (
-          <div key={index} className="flex w-[22%] justify-center">
+          <div key={index} className="flex w-1/3 justify-center">
             <CourseOfferingCard
               course={course.course}
               color={(index + 4) % 2 != 0 ? "blue" : "yellow"}

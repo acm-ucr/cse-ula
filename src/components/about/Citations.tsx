@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 
 const Citations = () => {
   return (
-    <div>
+    <div className="pt-8">
       <Header text="Citations" />
 
       <div className="mt-6 flex justify-center px-4 text-black">
