@@ -1,23 +1,27 @@
-export const Courses = [
+interface course {
+  name: string;
+}
+
+export const courses: course[] = [
   {
-    course: "9 series",
+    name: "9 series",
   },
   {
-    course: "10 series",
+    name: "10 series",
   },
   {
-    course: "CS011",
+    name: "CS011",
   },
   {
-    course: "CS111",
+    name: "CS111",
   },
   {
-    course: "CS141",
+    name: "CS141",
   },
   {
-    course: "CS061",
+    name: "CS061",
   },
   {
-    course: "CS100",
+    name: "CS100",
   },
 ];
