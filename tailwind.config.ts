@@ -9,7 +9,7 @@ module.exports = {
           "yellow-primary": "#FFB81C",
           "blue-accent": "#45ABFF",
           "yellow-accent": "#FBC754",
-          "blue-light": "#E3F2FD",
+          "blue-light": "#E7F3FF",
         },
       },
     },
