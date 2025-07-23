@@ -16,7 +16,7 @@ const Professor = () => {
           get to grow as educators. All in all, the ULA program is a good thing
           for everyone who's part of it."
         </p>
-        <p className="mt-2 text-right font-medium">
+        <p className="mt-2 text-right text-2xl font-medium">
           - Professor Watkinson Medina
         </p>
       </div>
