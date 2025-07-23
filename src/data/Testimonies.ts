@@ -1,4 +1,9 @@
-export const testimonies = [
+interface testimony {
+  name: string;
+  quote: string;
+}
+
+export const testimonies: testimony[] = [
   {
     name: "Copy Kurpanek",
     quote:
