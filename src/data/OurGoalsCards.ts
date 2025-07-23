@@ -1,8 +1,14 @@
 import Book from "@/public/about/book.svg";
 import People from "@/public/about/people.svg";
 import InfinityIcon from "@/public/about/infinity.svg";
+import { StaticImageData } from "next/image";
 
-export const ourGoalsCard = [
+interface cardItem {
+  image: StaticImageData;
+  text: string;
+}
+
+export const ourGoalsCard: cardItem[] = [
   {
     image: Book,
     text: "Improve the learning experience of students in core CS courses",
