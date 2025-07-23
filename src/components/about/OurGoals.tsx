@@ -1,21 +1,16 @@
-import Book from "@/public/about/book.svg";
 import OurGoalsCard from "@/components/about/OurGoalsCard";
+import Header from "@/components/Header";
+import { ourGoalsCard } from "@/data/OurGoalsCards";
 
 const OurGoals = () => {
   return (
-    <div className="flex w-full justify-evenly">
-      <OurGoalsCard
-        image={Book}
-        text="Improve the learning experience of students in core CS courses"
-      />
-      <OurGoalsCard
-        image={Book}
-        text="Improve the learning experience of students in core CS courses"
-      />
-      <OurGoalsCard
-        image={Book}
-        text="Improve the learning experience of students in core CS courses"
-      />
+    <div className="py-8">
+      <Header text="Our Goals" />
+      <div className="flex w-full justify-evenly pt-6">
+        {ourGoalsCard.map(({ image, text }, index) => (
+          <OurGoalsCard key={index} image={image} text={text} />
+        ))}
+      </div>
     </div>
   );
 };

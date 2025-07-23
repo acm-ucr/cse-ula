@@ -4,7 +4,7 @@ import Card from "@/components/home/Card";
 
 const Testimony = () => {
   return (
-    <div className="flex w-full flex-col bg-ula-blue-light p-8">
+    <div className="flex w-full flex-col bg-ula-blue-highlight p-8">
       <Header text="Words from the ULA Community" />
       <div className="mx-auto flex w-3/4 flex-col justify-center">
         <p className="my-8 text-center text-4xl font-semibold">Former ULAs</p>
