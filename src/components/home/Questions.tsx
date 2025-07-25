@@ -1,10 +1,12 @@
 import InfoButtonHeader from "@/components/home/InfoButtonHeader";
-//import InfoButton from "@/components/home/InfoButton";
+import blueBook from "@/public/home/blueBook.svg";
+import InfoButton from "@/components/home/InfoButton";
+
 const Questions = () => {
   return (
     <div className="">
       <InfoButtonHeader />
-      {/* <InfoButton /> Temporarily commented out to allow build after prop update-livayaa */}
+      <InfoButton icon={blueBook} text="Browse Courses" />
     </div>
   );
 };

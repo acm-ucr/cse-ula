@@ -1,19 +1,21 @@
 import Image from "next/image";
-import { ReactNode } from "react";
+import { StaticImageData } from "next/image";
+import arrow from "@/public/buttonArrow.svg";
 
-interface InfoButtonProps {
-  icon: ReactNode;
+interface infoButtonProps {
+  icon: StaticImageData;
   text: string;
 }
 
-const InfoButton = ({ icon, text }: InfoButtonProps) => {
+const InfoButton = ({ icon, text }: infoButtonProps) => {
   return (
-    <div className="mb-3 flex items-center justify-evenly gap-3 bg-white p-3">
+    <div className="m-4 flex w-[42%] items-center justify-between border bg-white px-6 py-5 shadow-lg">
       <div className="flex items-center gap-3">
-        <div>{icon}</div>
+        <Image src={icon} alt="icon" className="h-8 w-8" />
         <p className="text-lg font-medium text-black">{text}</p>
       </div>
-      <Image src="/buttonArrow.svg" alt="arrow" width={64} height={64} />
+
+      <Image src={arrow} alt="arrow" className="ml-auto w-12" />
     </div>
   );
 };
