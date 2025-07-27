@@ -6,7 +6,7 @@ const Questions = () => {
   return (
     <div className="">
       <InfoButtonHeader />
-      <InfoButton icon={blueBook} text="Browse Courses" />
+      <InfoButton icon={blueBook} text="Browse Courses" link="/about" />
     </div>
   );
 };
