@@ -12,9 +12,9 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
   return (
-    <div className="relative bg-ula-blue-primary px-5 py-4 font-medium text-white">
+    <div className="relative bg-ula-blue-primary p-5 font-medium text-white">
       <div className="hidden w-full items-center justify-between md:flex">
-        <div className="mx-5 flex gap-10 text-2xl">
+        <div className="mx-5 flex gap-8 text-2xl">
           {items.map(({ name, link }) => (
             <Link
               key={name}
@@ -42,7 +42,7 @@ const Navbar = () => {
         </button>
       </div>
       <div
-        className={`absolute left-0 top-full z-50 w-full overflow-hidden bg-ula-blue-primary transition-all duration-300 ease-in-out ${
+        className={`z-15 absolute left-0 top-full w-full overflow-hidden bg-ula-blue-primary transition-all duration-300 ease-in-out md:hidden ${
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
@@ -61,6 +61,9 @@ const Navbar = () => {
               {name}
             </Link>
           ))}
+          <Link href="https://discord.com/invite/BUvwNdB6eH" target="_blank">
+            <FaDiscord />
+          </Link>
         </div>
       </div>
     </div>
