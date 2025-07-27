@@ -3,14 +3,14 @@ import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 import { motion } from "motion/react";
 
-interface ComponentProps {
+interface ulaCardProps {
   image: StaticImageData;
   name: string;
   classes: string;
   description: string;
 }
 
-const Card = ({ image, name, classes, description }: ComponentProps) => {
+const Card = ({ image, name, classes, description }: ulaCardProps) => {
   const [flipped, setFlipped] = useState(false);
 
   return (
@@ -29,7 +29,7 @@ const Card = ({ image, name, classes, description }: ComponentProps) => {
         <div className="aspect-[4/3]">
           <Image
             src={image}
-            alt="Angel"
+            alt={name}
             className="h-full w-full object-cover"
           />
         </div>
