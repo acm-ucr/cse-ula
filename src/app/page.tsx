@@ -1,4 +1,3 @@
-import InfoButtonHeader from "@/components/home/InfoButtonHeader";
 import Landing from "@/components/home/Landing";
 import HelpInCourses from "@/components/home/HelpInCourses";
 import Location from "@/components/home/Location";
@@ -12,7 +11,6 @@ const Home = () => {
       <Landing />
       <HelpInCourses />
       <Location />
-      <InfoButtonHeader text="What courses can I get help with?" />
       <Questions />
       <Images />
       <Testimony />
