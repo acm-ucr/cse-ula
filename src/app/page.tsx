@@ -1,9 +1,8 @@
-import Example from "@/components/Example";
-
+import InfoButton from "@/components/home/InfoButton";
 const Home = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center text-center text-2xl">
-      <Example text1="Adjust" text2="These" text3="Props" />
+    <div>
+      <InfoButton text="What courses can I get help with?" />
     </div>
   );
 };
