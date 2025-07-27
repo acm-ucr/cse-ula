@@ -4,7 +4,8 @@ import Button from "@/components/Button";
 
 const textLines = [
   "Your friendly neighborhood ULAs are ready to help!",
-  "Just drop in to one of their help desk hours listed in the Calendar below with any questions you have. It’s free, and no advance registration required.",
+  "Just drop in to one of their help desk hours listed in the Calendar below with any questions you have.",
+  "It’s free, and no advance registration required.",
   "Some sessions are held online through Zoom and others in Winston Chung Hall 129 and will start in Week 2 of every quarter.",
 ];
 
@@ -12,16 +13,16 @@ const Location = () => {
   return (
     <div className="flex w-full flex-col items-center justify-evenly bg-ula-blue-primary md:flex-row">
       <div className="flex flex-col items-center gap-8 p-8 md:w-2/5">
-        <p className="flex flex-col items-center justify-center text-left tracking-wide text-white md:hidden md:text-2xl">
+        <div className="flex flex-col items-center justify-center text-left tracking-wide text-white md:hidden md:text-2xl">
           {textLines.map((line, i) => (
             <div key={i} className="mb-3">
               {line}
             </div>
           ))}
-        </p>
-        <p className="hidden text-left text-2xl tracking-wide text-white md:block">
+        </div>
+        <div className="hidden text-left text-2xl tracking-wide text-white md:block">
           {textLines.join(" ")}
-        </p>
+        </div>
         <div className="hidden md:block">
           <Button text="Get help here!" link="/calendar" />
         </div>
