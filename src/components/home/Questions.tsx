@@ -5,7 +5,7 @@ import InfoButton from "@/components/home/InfoButton";
 const Questions = () => {
   return (
     <div className="">
-      <InfoButtonHeader />
+      <InfoButtonHeader text="What courses can I get help with?" />
       <InfoButton icon={blueBook} text="Browse Courses" link="/about" />
     </div>
   );
