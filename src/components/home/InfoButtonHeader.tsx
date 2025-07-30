@@ -1,13 +1,10 @@
-import React from "react";
-interface InfoButtonHeaderProps {
+interface infoButtonHeaderProps {
   text: string;
 }
-const InfoButtonHeader = ({ text }: InfoButtonHeaderProps) => {
+const InfoButtonHeader = ({ text }: infoButtonHeaderProps) => {
   return (
-    <div className="m-4">
-      <div className="flex items-center border-l-8 border-[#FFB81C] px-4">
-        <div className="text-3xl font-bold text-ula-blue-primary">{text}</div>
-      </div>
+    <div className="m-4 border-l-8 border-ula-yellow-primary px-4 text-3xl font-bold text-ula-blue-primary">
+      {text}
     </div>
   );
 };
