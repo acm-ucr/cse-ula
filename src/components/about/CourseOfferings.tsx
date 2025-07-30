@@ -3,10 +3,6 @@ import Header from "@/components/Header";
 import { courses } from "@/data/CourseOfferings";
 
 const CourseOfferings = () => {
-  const firstRow = courses.slice(0, 4);
-  const secondRow = courses.slice(4, 7);
-  const lastItem = secondRow.length - 1;
-
   return (
     <div className="mb-6 flex w-full flex-col items-center justify-center bg-ula-blue-highlight py-8">
       <Header text="Course Offerings" />
@@ -20,27 +16,13 @@ const CourseOfferings = () => {
           or more ULAs there to offer you direct assistance!
         </p>
       </div>
-      <div className="mx-auto mb-8 grid w-11/12 grid-cols-2 gap-8 md:w-2/3 md:grid-cols-4 md:justify-center">
-        {firstRow.map((course, index) => (
-          <div key={index} className="flex justify-center">
-            <CourseOfferingCard
-              course={course.name}
-              color={index % 2 === 0 ? "blue" : "yellow"}
-            />
-          </div>
-        ))}
-      </div>
-      <div className="mx-auto grid w-11/12 grid-cols-2 gap-8 md:w-1/2 md:grid-cols-3 md:justify-center">
-        {secondRow.map((course, index) => (
-          <div
+      <div className="flex flex-wrap justify-center gap-4">
+        {courses.map((course, index) => (
+          <CourseOfferingCard
+            course={course.name}
             key={index}
-            className={`flex justify-center ${index === lastItem ? "col-span-2 w-[173.75px] justify-self-center md:col-span-1 md:w-full" : ""}`}
-          >
-            <CourseOfferingCard
-              course={course.name}
-              color={(index + 4) % 2 != 0 ? "blue" : "yellow"}
-            />
-          </div>
+            color={index % 2 === 0 ? "blue" : "yellow"}
+          />
         ))}
       </div>
     </div>
