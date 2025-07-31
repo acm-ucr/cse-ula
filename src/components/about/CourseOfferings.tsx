@@ -16,12 +16,21 @@ const CourseOfferings = () => {
           or more ULAs there to offer you direct assistance!
         </p>
       </div>
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className="hidden flex-wrap justify-center gap-8 sm:flex">
         {courses.map((course, index) => (
           <CourseOfferingCard
             course={course.name}
             key={index}
-            color={index % 2 === 0 ? "blue" : "yellow"}
+            color={[0, 2, 5].includes(index) ? "blue" : "yellow"}
+          />
+        ))}
+      </div>
+      <div className="flex flex-wrap justify-center gap-8 sm:hidden">
+        {courses.map((course, index) => (
+          <CourseOfferingCard
+            course={course.name}
+            key={index}
+            color={[0, 3, 4].includes(index) ? "blue" : "yellow"}
           />
         ))}
       </div>
