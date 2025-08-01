@@ -4,7 +4,7 @@ import ULAs from "@/data/CurrentULAs";
 const ULAMapping = () => {
   return (
     <div className="">
-      <div className="mx-10 grid grid-cols-3 justify-items-center bg-ula-blue-highlight py-8">
+      <div className="mx-16 flex flex-wrap items-center justify-center bg-ula-blue-highlight py-10">
         {ULAs.map((ULA, index) => (
           <Card
             key={index}
