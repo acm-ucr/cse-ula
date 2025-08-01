@@ -1,9 +1,9 @@
 import ULAs from "@/components/ula/OurULAS";
-import Header from "@/components/Header";
+import MeetULAs from "@/components/ula/MeetULAS";
 const ULA = () => {
   return (
     <div>
-      <Header text="Meet the 2025-2026 ULAs!" />
+      <MeetULAs />
       <ULAs />
     </div>
   );
