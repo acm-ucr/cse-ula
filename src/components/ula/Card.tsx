@@ -35,7 +35,7 @@ const Card = ({ image, name, classes, description }: ulaCardProps) => {
         </div>
       </div>
       <div
-        className="absolute flex h-full items-center justify-center rounded-xl border-8 border-ula-yellow-accent p-4 text-center text-base"
+        className="absolute flex h-full items-center justify-center rounded-xl border-8 border-ula-yellow-accent px-8 py-4 text-center text-xl"
         style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
       >
         {description}
