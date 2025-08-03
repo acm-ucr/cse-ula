@@ -4,16 +4,25 @@ import { FaDiscord } from "react-icons/fa";
 import Link from "next/link";
 const Footer = () => {
   return (
-    <div className="flex items-center justify-between bg-ula-blue-primary p-8 text-white">
-      <div className="flex flex-col items-center justify-center">
-        <Image src={riversideLogo} alt="Logo of UCR" />
-        <div className="w-3/4 text-center text-xl">
+    <div className="flex flex-col-reverse items-center justify-between gap-2 bg-ula-blue-primary p-8 text-white sm:flex-row">
+      <div className="flex flex-col items-center justify-center gap-2 sm:gap-0">
+        <Image
+          className="h-12 w-32 sm:h-5/6 sm:w-11/12"
+          src={riversideLogo}
+          alt="Logo of UCR"
+        />
+        <div className="w-3/4 text-center text-lg sm:text-xl">
           Undergraduate Learning Assistants
         </div>
       </div>
       <div className="flex items-center gap-4">
-        <div className="border-r-2 p-4 text-2xl font-bold">WCH Room 129</div>
-        <Link href="https://discord.com/invite/BUvwNdB6eH">
+        <div className="order-2 border-l-2 p-4 text-2xl font-bold sm:order-1 sm:border-l-0 sm:border-r-2">
+          WCH Room 129
+        </div>
+        <Link
+          href="https://discord.com/invite/BUvwNdB6eH"
+          className="order-1 sm:order-2"
+        >
           <FaDiscord size={50} />
         </Link>
       </div>
