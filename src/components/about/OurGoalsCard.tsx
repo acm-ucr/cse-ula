@@ -8,8 +8,8 @@ type ourGoalsProps = {
 
 const OurGoalsCard = ({ image, text }: ourGoalsProps) => {
   return (
-    <div className="mx-8 flex w-1/4 flex-col items-center justify-center gap-y-4 border-y-4 border-ula-yellow-primary py-8 text-center text-xl font-medium">
-      <Image src={image} alt="logo" />
+    <div className="mx-8 my-8 flex min-h-[283px] w-1/4 min-w-[245px] flex-col items-center justify-center gap-y-4 border-y-4 border-ula-yellow-primary text-center text-xl font-medium md:py-8">
+      <Image src={image} alt="logo" width={68} height={68} />
       <div className="px-8">{text}</div>
     </div>
   );
