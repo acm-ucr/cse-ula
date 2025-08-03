@@ -3,7 +3,7 @@
 import OurGoalsCard from "@/components/about/OurGoalsCard";
 import Header from "@/components/Header";
 import { ourGoalsCard } from "@/data/OurGoalsCards";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const OurGoals = () => {
   return (
