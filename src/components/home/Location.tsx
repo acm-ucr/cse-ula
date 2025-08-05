@@ -12,7 +12,7 @@ const Location = () => {
             Just drop in to one of their help desk hours listed in the Calendar
             below with any questions you have.
           </p>
-          <p>It’s free, and no advance registration required.</p>
+          <p>It's free, and no advance registration required.</p>
           <p>
             Some sessions are held online through Zoom and others in Winston
             Chung Hall 129 and will start in Week 2 of every quarter.
@@ -21,7 +21,7 @@ const Location = () => {
         <p className="hidden text-left text-2xl tracking-wide text-white md:block">
           Your friendly neighborhood ULAs are ready to help! Just drop in to one
           of their help desk hours listed in the Calendar below with any
-          questions you have. It’s free, and no advance registration required.
+          questions you have. It's free, and no advance registration required.
           Some sessions are held online through Zoom and others in Winston Chung
           Hall 129 and will start in Week 2 of every quarter.
         </p>
