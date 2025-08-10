@@ -5,7 +5,7 @@ import baselinePeople from "@/public/home/baselinePeople.svg";
 
 const Questions = () => {
   return (
-    <div className="flex flex-col justify-evenly px-2 pt-8 xl:flex-row">
+    <div className="flex flex-col justify-evenly px-8 xl:px-2 pt-8 xl:flex-row">
       <div className="xl:w-2/5">
         <InfoButtonHeader text="What courses can I get help with?" />
         <InfoButton icon={blueBook} text="Browse Courses" link="/about" />
