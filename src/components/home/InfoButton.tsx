@@ -18,7 +18,7 @@ const InfoButton = ({ icon, text, link }: infoButtonProps) => {
           <p className="whitespace-nowrap text-lg">{text}</p>
         </div>
 
-        <Image src={arrow} alt="arrow" className="ml-auto w-16 lg:w-20" />
+        <Image src={arrow} alt="arrow" className="ml-auto" />
       </div>
     </Link>
   );

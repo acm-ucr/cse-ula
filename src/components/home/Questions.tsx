@@ -5,12 +5,12 @@ import baselinePeople from "@/public/home/baselinePeople.svg";
 
 const Questions = () => {
   return (
-    <div className="flex flex-col justify-evenly px-2 pt-8 md:flex-row">
-      <div className="md:w-2/5">
+    <div className="flex flex-col justify-evenly px-2 pt-8 xl:flex-row">
+      <div className="xl:w-2/5">
         <InfoButtonHeader text="What courses can I get help with?" />
         <InfoButton icon={blueBook} text="Browse Courses" link="/about" />
       </div>
-      <div className="md:w-2/5">
+      <div className="xl:w-2/5">
         <InfoButtonHeader text="Who are the ULAs?" />
         <InfoButton icon={baselinePeople} text="Meet the ULAs" link="/ula" />
       </div>
