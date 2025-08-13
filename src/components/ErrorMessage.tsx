@@ -1,4 +1,4 @@
-import ErrorPage from "@/public/error.png";
+import ErrorPage from "@/public/error.webp";
 import Image from "next/image";
 import Button from "./Button";
 
