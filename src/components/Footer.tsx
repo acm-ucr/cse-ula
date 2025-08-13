@@ -5,12 +5,14 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className="flex flex-col-reverse items-center justify-between gap-2 bg-ula-blue-primary p-8 text-white sm:flex-row">
-      <div className="flex flex-col items-center justify-center gap-2 sm:gap-0">
-        <Image
-          className="h-12 w-32 sm:h-5/6 sm:w-11/12"
-          src={riversideLogo}
-          alt="Logo of UCR"
-        />
+      <div className="flex flex-col items-center gap-2 sm:gap-0">
+        <div className="h-12 w-32 sm:h-5/6 sm:w-11/12">
+          <Image
+            className="object-contain"
+            src={riversideLogo}
+            alt="Logo of UCR"
+          />
+        </div>
         <div className="w-3/4 text-center text-lg sm:text-xl">
           Undergraduate Learning Assistants
         </div>
