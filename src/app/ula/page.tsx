@@ -1,8 +1,9 @@
 import ULAs from "@/components/ula/OurULAS";
+import MeetULAs from "@/components/ula/MeetULAS";
 const ULA = () => {
   return (
     <div>
-      ULA
+      <MeetULAs />
       <ULAs />
     </div>
   );
