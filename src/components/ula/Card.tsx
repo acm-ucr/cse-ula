@@ -26,7 +26,7 @@ const Card = ({ image, name, classes, description }: ulaCardProps) => {
         className="flex w-full flex-col overflow-hidden rounded-xl"
         style={{ backfaceVisibility: "hidden", transform: "rotateY(0deg)" }}
       >
-        <div className="aspect-[4/4]">
+        <div className="aspect-[1/1]">
           <Image src={image} alt={name} fill={true} className="object-cover" />
         </div>
         <div className="z-20 flex flex-col items-center justify-center bg-ula-yellow-accent py-3 text-2xl font-bold shadow-[0_-20px_40px_rgba(255,200,0,.8)]">
