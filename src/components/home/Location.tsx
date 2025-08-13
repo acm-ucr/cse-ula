@@ -6,7 +6,7 @@ const Location = () => {
   return (
     <div className="flex w-full flex-col items-center justify-evenly bg-ula-blue-primary md:flex-row">
       <div className="flex flex-col items-center gap-8 px-8 pb-4 pt-8 md:w-2/5 md:pb-8">
-        <div className="flex flex-col items-center justify-center gap-y-3 text-left tracking-wide text-white md:hidden md:text-2xl">
+        <div className="flex flex-col gap-y-3 text-left text-white md:hidden md:text-2xl">
           <p>Your friendly neighborhood ULAs are ready to help!</p>
           <p>
             Just drop in to one of their help desk hours listed in the Calendar
@@ -18,7 +18,7 @@ const Location = () => {
             Chung Hall 129 and will start in Week 2 of every quarter.
           </p>
         </div>
-        <p className="hidden text-left text-2xl tracking-wide text-white md:block">
+        <p className="hidden text-left text-2xl text-white md:block">
           Your friendly neighborhood ULAs are ready to help! Just drop in to one
           of their help desk hours listed in the Calendar below with any
           questions you have. It's free, and no advance registration required.
