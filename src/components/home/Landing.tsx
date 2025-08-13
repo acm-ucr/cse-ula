@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 import Image from "next/image";
+import landingPage from "@/public/home/WCHLanding.webp";
 
 const Landing = () => {
   return (
@@ -12,7 +13,7 @@ const Landing = () => {
       className="relative h-screen w-full overflow-hidden"
     >
       <Image
-        src="/home/WCHLanding.webp"
+        src={landingPage}
         alt="Landing Background"
         fill
         style={{ objectFit: "cover" }}
