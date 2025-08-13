@@ -36,7 +36,9 @@ const Navbar = () => {
         </div>
       </div>
       <div className="flex items-center justify-between md:hidden">
-        <div className="text-2xl font-bold">ULA</div>
+        <Link href="/" className="text-2xl font-bold">
+          ULA
+        </Link>
         <button onClick={toggleMenu} className="text-3xl">
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
