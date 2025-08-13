@@ -9,7 +9,7 @@ const CourseOfferingCard = ({ course, color }: CourseOfferingCardProps) => {
 
   return (
     <div
-      className={`flex aspect-[11/12] w-1/3 items-center justify-center rounded-xl sm:w-1/5 ${bgColor} p-2 text-center text-4xl font-semibold`}
+      className={`flex aspect-[11/12] w-1/3 items-center justify-center rounded-xl sm:w-1/5 ${bgColor} p-2 text-center text-2xl font-semibold md:text-4xl`}
     >
       {course}
     </div>
