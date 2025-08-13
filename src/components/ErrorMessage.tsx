@@ -1,4 +1,4 @@
-import ErrorPage from "@/public/error.svg";
+import ErrorPage from "@/public/error.png";
 import Image from "next/image";
 import Button from "./Button";
 
@@ -9,7 +9,7 @@ type Props = {
 
 const ErrorMessage = ({ message, details }: Props) => {
   return (
-    <div className="relative h-screen w-screen">
+    <div className="relative h-screen w-full">
       <Image src={ErrorPage} alt="Error Page" fill objectFit="cover" priority />
 
       <div className="absolute flex h-full w-full flex-col items-center justify-center gap-4">
