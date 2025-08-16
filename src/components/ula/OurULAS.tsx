@@ -19,13 +19,17 @@ const ULAMapping = () => {
           }}
         >
           {ULAs.map((ULA, index) => (
-            <Card
+            <div
               key={index}
-              name={ULA.name}
-              classes={ULA.classes}
-              image={ULA.image}
-              description={ULA.desc}
-            />
+              className="relative m-4 flex w-1/4 cursor-pointer flex-col items-center justify-center"
+            >
+              <Card
+                name={ULA.name}
+                classes={ULA.classes}
+                image={ULA.image}
+                description={ULA.desc}
+              />
+            </div>
           ))}
         </motion.div>
       </div>

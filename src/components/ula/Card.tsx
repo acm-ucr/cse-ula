@@ -19,7 +19,7 @@ const Card = ({ image, name, classes, description }: ulaCardProps) => {
       transition={{ duration: 0.5 }}
       animate={{ rotateY: flipped ? 180 : 0 }}
       onClick={() => setFlipped((prevState) => !prevState)}
-      className="relative m-4 flex w-10/12 cursor-pointer flex-col items-center justify-center xl:w-1/4"
+      className="w-full"
       style={{ transformStyle: "preserve-3d" }}
     >
       <div
