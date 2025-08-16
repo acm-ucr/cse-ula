@@ -8,12 +8,11 @@ const ULAMapping = () => {
   return (
     <div className="">
       <div className="mx-4 flex flex-col place-items-center bg-ula-blue-highlight py-10 lg:mx-16 lg:flex-row lg:flex-wrap lg:items-center lg:justify-center">
-      
         {ULAs.map((ULA, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 35}}
-            whileInView={{ opacity: 1, y: 0}}
+            initial={{ opacity: 0, y: 35 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{
               duration: 1.5,
