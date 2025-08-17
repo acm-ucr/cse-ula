@@ -13,7 +13,7 @@ const Testimony = () => {
             <Card key={index} name={name} quote={quote} />
           ))}
         </div>
-        <p className="my-8 pt-6 text-center text-4xl font-semibold">
+        <p className="my-8 pt-8 text-center text-4xl font-semibold">
           Current ULAs
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -21,7 +21,7 @@ const Testimony = () => {
             <Card key={index} name={name} quote={quote} />
           ))}
         </div>
-        <p className="my-8 pt-6 text-center text-4xl font-semibold">
+        <p className="my-8 pt-8 text-center text-4xl font-semibold">
           Students on ULA
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2">
