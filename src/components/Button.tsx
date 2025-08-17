@@ -9,8 +9,8 @@ interface buttonProps {
 
 const Button = ({ text, link }: buttonProps) => {
   return (
-    <div className="rounded-2xl bg-ula-yellow-accent p-3 text-3xl font-medium">
-      <Link href={link} className="flex flex-row gap-12 pl-2">
+    <div className="rounded-2xl bg-ula-yellow-accent p-3 text-xl font-medium md:text-3xl">
+      <Link href={link} className="flex flex-row gap-8 pl-2 md:gap-12">
         {text}
         <Image src={buttonArrow} alt={"Arrow"} />
       </Link>
