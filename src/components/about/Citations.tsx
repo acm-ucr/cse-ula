@@ -1,12 +1,27 @@
+"use client";
+import { motion } from "motion/react";
 import Link from "next/link";
 import Header from "@/components/Header";
 
 const Citations = () => {
   return (
     <div className="pt-8">
-      <Header text="Citations" />
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        <Header text="Citations" />
+      </motion.div>
 
-      <div className="mt-6 flex justify-center px-4 text-black">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="mt-6 flex justify-center px-4 text-black"
+      >
         <div className="mb-6 w-1/2 text-center text-xl font-bold">
           Check out the research about the ULA program!
           <p className="my-8 text-base font-normal tracking-wide">
@@ -25,7 +40,7 @@ const Citations = () => {
             </Link>
           </p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
