@@ -10,7 +10,7 @@ import moment from "moment";
 import { useQuery } from "@tanstack/react-query";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import CustomToolbar from "./week/customToolBar";
-// import CustomEventPopover from "./week/customevent";
+import CustomEventPopover from "./week/customEvent";
 import CustomDayHeader from "./week/customDayHeader";
 
 export function useWindowWidth() {
@@ -56,14 +56,16 @@ export type CalendarEvent = {
 //This will hold calendar events of all types (i.e. all classes)
 //Dont forget to add in the google calendar id later
 export const calendarSources = [
-  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR, eventType: "CS 009ABC" },
-  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR, eventType: "CS 010ABC" },
-  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR, eventType: "CS 011" },
-  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR, eventType: "CS 061" },
-  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR, eventType: "CS 100" },
-  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR, eventType: "CS 111" },
-  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR, eventType: "CS 141" },
+  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS009, eventType: "CS 009ABC" },
+  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS010, eventType: "CS 010ABC" },
+  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS011, eventType: "CS 011" },
+  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS061, eventType: "CS 061" },
+  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS100, eventType: "CS 100" },
+  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS111, eventType: "CS 111" },
+  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS141, eventType: "CS 141" },
 ];
+
+
 
 //Uses localization to get the momenets date I think??
 const localizer = momentLocalizer(moment);
@@ -84,9 +86,6 @@ const CalendarCall = () => {
     calendarSources.map((source) => source.eventType),
   );
   const isMobile = useWindowWidth() < 768;
-
-
-
 
   const { data, isLoading } = useQuery<{
     allEvents: TypedGoogleEventProps[];
@@ -169,24 +168,21 @@ const CalendarCall = () => {
       );
   }, [data]);
 
-
-
-
   //Custom event renderer for react-big-calendar
-  // const CustomEvent = ({ event }: { event: CalendarEvent }) => {
-  //   const resource = event.resource;
-  //   return (
-  //     <CustomEventPopover
-  //       startDate={resource.start}
-  //       endDate={resource.end}
-  //       title={event.title}
-  //       date={event.start}
-  //       location={resource.location}
-  //       description={resource.description}
-  //       eventType={resource.eventType}
-  //     />
-  //   );
-  // };
+  const CustomEvent = ({ event }: { event: CalendarEvent }) => {
+    const resource = event.resource;
+    return (
+      <CustomEventPopover
+        startDate={resource.start}
+        endDate={resource.end}
+        title={event.title}
+        date={event.start}
+        location={resource.location}
+        description={resource.description}
+        eventType={resource.eventType}
+      />
+    );
+  };
 
   return (
     <div>
@@ -248,7 +244,7 @@ const CalendarCall = () => {
                   allClassTypes={calendarSources.map((s) => s.eventType)}
                 />
               ),
-              // event: CustomEvent,
+              event: CustomEvent,
               //Day view not given in header because if it's one column, it
               //won't use the header and not render it
               header: CustomDayHeader,
