@@ -10,7 +10,6 @@ type Props = {
 
 const ErrorMessage = ({ message, details }: Props) => {
   return (
-    <div>
       <div className="relative h-screen w-full">
         <div className="hidden sm:flex">
           <Image
@@ -42,7 +41,6 @@ const ErrorMessage = ({ message, details }: Props) => {
           <Button text="Return home" link="./" />
         </div>
       </div>
-    </div>
   );
 };
 export default ErrorMessage;
