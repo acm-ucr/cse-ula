@@ -14,7 +14,7 @@ const FadeIn = ({ children }: { children: React.ReactNode }) => {
       {children}
     </motion.div>
   );
-}
+};
 
 const Professor = () => {
   return (
@@ -29,10 +29,10 @@ const Professor = () => {
 
       <FadeIn>
         <p className="font-xl text-left text-lg text-black xl:text-2xl">
-          "The ULA program is a great chance to make a real difference.
-          Students get more personalized learning that helps with their
-          classes, and ULAs get to grow as educators. All in all, the ULA
-          program is a good thing for everyone who's part of it."
+          "The ULA program is a great chance to make a real difference. Students
+          get more personalized learning that helps with their classes, and ULAs
+          get to grow as educators. All in all, the ULA program is a good thing
+          for everyone who's part of it."
         </p>
         <p className="font-xs mt-2 text-right text-black xl:text-xl">
           - Professor Watkinson Medina
