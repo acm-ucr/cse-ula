@@ -7,8 +7,8 @@ import { motion } from "motion/react";
 
 const Questions = () => {
   return (
-    <div className="flex flex-col justify-evenly px-8 pt-8 xl:flex-row xl:px-2">
-      <div className="xl:w-2/5">
+    <div className="flex flex-col justify-evenly px-8 pt-8 lg:flex-row lg:px-2">
+      <div className="lg:w-2/5">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
