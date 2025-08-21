@@ -19,7 +19,7 @@ const Card = ({ image, name, classes, description }: ulaCardProps) => {
       transition={{ duration: 0.5 }}
       animate={{ rotateY: flipped ? 180 : 0 }}
       onClick={() => setFlipped((prevState) => !prevState)}
-      className="relative m-4 flex w-1/4 cursor-pointer flex-col items-center justify-center"
+      className="w-full"
       style={{ transformStyle: "preserve-3d" }}
     >
       <div
@@ -35,7 +35,7 @@ const Card = ({ image, name, classes, description }: ulaCardProps) => {
         </div>
       </div>
       <div
-        className="absolute flex h-full items-center justify-center rounded-xl border-8 border-ula-yellow-accent px-8 py-4 text-center text-xl"
+        className="text-md absolute inset-0 flex h-full items-center justify-center rounded-xl border-8 border-ula-yellow-accent px-8 py-4 text-center lg:text-xl"
         style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
       >
         {description}
