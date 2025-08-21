@@ -16,7 +16,7 @@ const Card = ({ name, quote }: componentProps) => {
       transition={{ duration: 0.5 }}
       className="h-full"
     >
-      <div className="mx-auto my-4 flex w-2/3 flex-col place-items-center justify-evenly rounded-xl bg-white p-3 shadow-xl lg:h-full lg:pb-8 lg:pl-8 lg:pr-8">
+      <div className="mx-auto my-4 flex w-2/3 flex-col place-items-center justify-evenly rounded-xl bg-white p-3 shadow-xl lg:h-full lg:px-8 lg:pb-8">
         <div className="place-items-center p-1">
           <Image src={quoteIcon} className="w-1/2 lg:w-3/4" alt="quoteIcon" />
         </div>

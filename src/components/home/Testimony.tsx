@@ -14,9 +14,7 @@ const Testimony = () => {
         transition={{ duration: 1, delay: 0.25 }}
       >
         <Header text="Words from the ULA Community" />
-        <div className="mx-auto w-1/5 justify-end border-b-4 border-ula-yellow-primary p-2">
-          {" "}
-        </div>
+        <div className="mx-auto w-1/5 justify-end border-b-4 border-ula-yellow-primary p-2" />
       </motion.div>
       <div className="mx-auto flex flex-col justify-center lg:w-3/4">
         <motion.div
@@ -33,7 +31,6 @@ const Testimony = () => {
               initial={{ opacity: 0, x: index === 0 ? -100 : 100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.35 }}
-              className=""
             >
               <Card key={index} name={name} quote={quote} />
             </motion.div>
