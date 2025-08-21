@@ -10,7 +10,6 @@ const item = {
 };
 
 const container = {
-  hidden: {},
   show: { transition: { staggerChildren: 0.15 } },
 };
 
@@ -20,7 +19,7 @@ const Location = () => {
       variants={container}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ amount: 0.3 }}
       className="flex w-full flex-col items-center justify-evenly bg-ula-blue-primary md:flex-row"
     >
       <div className="flex flex-col items-center gap-8 px-8 pb-4 pt-8 md:w-2/5 md:pb-8">
