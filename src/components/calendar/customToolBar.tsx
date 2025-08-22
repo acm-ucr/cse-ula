@@ -62,7 +62,7 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({
                 setSelectedClass(types);
               }
             }}
-            className="grid grid-cols-3 gap-2 pb-4 md:flex md:gap-0 md:space-x-2 md:pb-0"
+            className="grid grid-flow-col grid-rows-2 gap-2 pb-4 md:flex md:gap-0 md:space-x-2 md:pb-0"
           >
             <ToggleGroupItem
               className="flex w-full justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary"
