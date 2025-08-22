@@ -1,10 +1,10 @@
-
 import {
   Dialog,
   DialogContent,
   DialogTrigger,
   DialogOverlay,
 } from "@/components/ui/dialog";
+
 interface CalendarEventDialogProps {
   startDate: {
     dateTime?: string;
@@ -15,7 +15,6 @@ interface CalendarEventDialogProps {
     date?: string;
   };
   title: string;
-  date: Date;
   location?: string;
   description?: string;
   eventType: string;
@@ -25,7 +24,6 @@ const CalendarEventDialog = ({
   startDate,
   endDate,
   title,
-  date,
   location,
   description,
   eventType,
@@ -34,6 +32,11 @@ const CalendarEventDialog = ({
   let eventEndDate = new Date();
   let hasStartTime = false;
   let hasEndTime = false;
+  let hasLocation = false;
+
+  if (location) {
+    hasLocation = true;
+  }
 
   if (startDate.dateTime) {
     eventStartDate = new Date(startDate.dateTime);
@@ -69,50 +72,42 @@ const CalendarEventDialog = ({
 
   return (
     <Dialog>
-      <div
-        className= "mx-1 my-1 flex w-2/5 cursor-default flex-col rounded-md px-2 py-3 text-xs md:min-w-full text-black bg-ula-yellow-primary" 
-      >
-        <DialogTrigger className={`cursor-pointer text-left hover:opacity-75`}>
-          <div className="overflow-hidden text-ellipsis whitespace-nowrap font-bold">
-            {title}
+      <div className="text-s flex h-full cursor-default flex-col rounded-2xl border-2 border-black bg-ula-blue-accent px-2 py-3 text-white w-full">
+        <DialogTrigger className="cursor-pointer whitespace-nowrap text-left hover:opacity-50">
+          <div className="overflow-hidden text-ellipsis">
+            {hasStartTime && timeRangeDisplay}
           </div>
-          <div className="text-[90%]">{hasStartTime && timeRangeDisplay}</div>
+          <div className="overflow-hidden text-ellipsis text-[90%]">
+            {eventType}
+          </div>
           <div className="overflow-hidden text-ellipsis whitespace-nowrap text-[90%]">
             {location ? location : "No location"}
           </div>
         </DialogTrigger>
       </div>
-      <DialogContent className="z-50 w-[80vw] border-2 border-black bg-white p-0 shadow-md md:w-[40vw] 2xl:w-[30vw]">
-        <div className="grid grid-cols-4 px-4 py-2 text-xl font-semibold">
-          <p className="col-span-3">{title}</p>
-          <p className="flex justify-end">
-            {date.toLocaleString("default", {
-              month: "short",
-              day: "numeric",
-              year: "numeric",
-            })}
-          </p>
-        </div>
-      </DialogContent>
-      <DialogOverlay className="bg-gray-400/60">
-        <DialogContent className="z-50 w-[80vw] border-2 border-black bg-white p-0 shadow-md md:w-[40vw] 2xl:w-[30vw]">
-          <div className="grid grid-cols-4 px-4 py-2 text-xl font-semibold">
-            <p className="col-span-3">{title}</p>
-            <p className="flex justify-end">
-              {date.toLocaleString("default", {
-                month: "short",
-                day: "numeric",
-                year: "numeric",
-              })}
-            </p>
+      <DialogOverlay className="bg-gray-400/50">
+        <DialogContent className="z-50 w-[80vw] bg-white p-0 shadow-md md:w-[40vw] 2xl:w-[30vw]">
+          <div className="rounded-t-md bg-ula-blue-accent px-10 py-3 text-xl text-white">
+            {title}
           </div>
-
-          <div className="rounded-b-xl bg-white px-4 py-3 text-lg">
-            <div className="flex">
-              {hasStartTime && <p>{timeRangeDisplay}</p>}
-            </div>
-            <p>{location}</p>
-            {description && <p className="pb-4 pt-8">{description}</p>}
+          <div className="rounded-b-xl bg-white px-10 text-lg">
+            <ul className="list-disc pb-4 pl-10 space-y-4 marker:text-2xl marker:text-ula-blue-accent">
+              {hasStartTime && (
+                <li>
+                  {timeRangeDisplay}
+                </li>
+              )}
+              {hasLocation && (
+                <li>
+                 {location}
+                </li>
+              )}
+              {description && (
+                <li>
+                  {description}
+                </li>
+              )}
+            </ul>
           </div>
         </DialogContent>
       </DialogOverlay>
