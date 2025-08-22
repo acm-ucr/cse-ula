@@ -44,7 +44,9 @@ const DialogContent = React.forwardRef<
       {...props}
     >
       {children}
-      <DialogPrimitive.Close className="absolute right-4 top-4 opacity-80 transition-opacity hover:opacity-100"><IoClose className = "scale-150 text-white"/></DialogPrimitive.Close>
+      <DialogPrimitive.Close className="absolute right-4 top-4 opacity-80 transition-opacity hover:opacity-100">
+        <IoClose className="scale-150 text-white" />
+      </DialogPrimitive.Close>
     </DialogPrimitive.Content>
   </DialogPortal>
 ));
