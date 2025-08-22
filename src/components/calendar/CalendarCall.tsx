@@ -9,9 +9,9 @@ import {
 import moment from "moment";
 import { useQuery } from "@tanstack/react-query";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import CustomToolbar from "./week/customToolBar";
-import CustomEventPopover from "./week/customEvent";
-import CustomDayHeader from "./week/customDayHeader";
+import CustomToolbar from "./customToolBar";
+import CustomEventPopover from "./customEvent";
+import CustomDayHeader from "./customDayHeader";
 
 export function useWindowWidth() {
   const [width, setWidth] = useState(
@@ -53,8 +53,6 @@ export type CalendarEvent = {
   resource: TypedGoogleEventProps;
 };
 
-//This will hold calendar events of all types (i.e. all classes)
-//Dont forget to add in the google calendar id later
 export const calendarSources = [
   { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS009, eventType: "CS 009ABC" },
   { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS010, eventType: "CS 010ABC" },
@@ -65,15 +63,11 @@ export const calendarSources = [
   { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS141, eventType: "CS 141" },
 ];
 
-
-
-//Uses localization to get the momenets date I think??
 const localizer = momentLocalizer(moment);
 
-//Note this calendar will only have week and day
 const CalendarCall = () => {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
-  const [isDay, setIsDay] = React.useState<boolean>(true);
+  const [isDay, setIsDay] = React.useState<boolean>(false);
   const currentMonth = date?.toLocaleDateString("en-US", {
     month: "long",
   });
@@ -139,7 +133,6 @@ const CalendarCall = () => {
     },
   });
 
-  // Convert Google events to react-big-calendar events
   const calendarEvents = React.useMemo(() => {
     if (!data?.allEvents) return [];
     return data.allEvents
@@ -168,7 +161,6 @@ const CalendarCall = () => {
       );
   }, [data]);
 
-  //Custom event renderer for react-big-calendar
   const CustomEvent = ({ event }: { event: CalendarEvent }) => {
     const resource = event.resource;
     return (
@@ -176,7 +168,6 @@ const CalendarCall = () => {
         startDate={resource.start}
         endDate={resource.end}
         title={event.title}
-        date={event.start}
         location={resource.location}
         description={resource.description}
         eventType={resource.eventType}
@@ -186,9 +177,9 @@ const CalendarCall = () => {
 
   return (
     <div>
-      <div className="w-11/12 mx-auto my-4 flex justify-between text-nowrap pt-8 text-6xl font-bold text-ula-blue-primary">
-        {currentMonth}, {currentYear}
-        <div className="rounded-xl border-2 border-black p-2 text-xl text-black">
+      <div className="w-11/12 mx-auto my-4 flex flex-col text-center md:flex-row md:justify-between text-nowrap text-6xl font-bold text-ula-blue-primary">
+        <div className = "md:pb-0 pb-6">{currentMonth}, {currentYear}</div>
+        <div className="flex justify-center rounded-xl border-2 border-black px-2 text-xl text-black">
           <button
             onClick={() => setIsDay(false)}
             className={`my-1 rounded-lg px-8 py-2 transition-colors duration-200 ${
@@ -224,17 +215,17 @@ const CalendarCall = () => {
             titleAccessor="title"
             defaultView={isDay ? Views.DAY : Views.WEEK}
             views={["day", "week"]}
-            min={new Date(1970, 1, 1, 9, 0, 0)} // 9:00 AM
-            max={new Date(1970, 1, 1, 21, 0, 0)} // 8:00 PM
+            min={new Date(1970, 1, 1, 9, 0, 0)}
+            max={new Date(1970, 1, 1, 21, 0, 0)}
             date={date}
             onNavigate={setDate}
             formats={{
+              eventTimeRangeFormat: () => "",
               timeGutterFormat: (date) =>
                 isMobile
                   ? moment(date).format("hA")
                   : moment(date).format("h:mm A"),
             }}
-            //key={isMobile ? "mobile" : "desktop"}
             components={{
               toolbar: (props) => (
                 <CustomToolbar
@@ -245,8 +236,6 @@ const CalendarCall = () => {
                 />
               ),
               event: CustomEvent,
-              //Day view not given in header because if it's one column, it
-              //won't use the header and not render it
               header: CustomDayHeader,
             }}
             eventPropGetter={() => ({

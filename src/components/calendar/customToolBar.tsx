@@ -1,7 +1,6 @@
-// import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { ToolbarProps, Navigate } from "react-big-calendar";
-import type { CalendarEvent } from "../CalendarCall";
+import type { CalendarEvent } from "./CalendarCall";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 interface CustomToolbarProps extends ToolbarProps<CalendarEvent, object> {
@@ -43,7 +42,7 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({
 
   return (
     <div>
-      <div className="mx-auto flex w-full flex-col items-center justify-between pb-8 md:flex-row">
+      <div className="mx-auto flex w-full flex-col items-center justify-between pb-4 md:flex-row">
         <div className="flex justify-start">
           <ToggleGroup
             type="multiple"
@@ -52,8 +51,6 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({
               const toggledType =
                 selectedClass.find((type) => !types.includes(type)) ??
                 types.find((type) => !selectedClass.includes(type));
-
-              //All different edge cases of selecting buttons
               if (
                 selectedClass.length === allClassTypes.length &&
                 types.length === allClassTypes.length - 1
@@ -68,43 +65,43 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({
             className="grid grid-cols-3 gap-2 pb-4 md:flex md:gap-0 md:space-x-2 md:pb-0"
           >
             <ToggleGroupItem
-              className="flex w-full items-center justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary data-[state=on]:text-black"
+              className="flex w-full justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary"
               value="CS 009ABC"
             >
               CS 009ABC
             </ToggleGroupItem>
             <ToggleGroupItem
-              className="flex w-full items-center justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary data-[state=on]:text-black"
+              className="flex w-full justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary"
               value="CS 010ABC"
             >
               CS 010ABC
             </ToggleGroupItem>
             <ToggleGroupItem
-              className="flex w-full items-center justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary data-[state=on]:text-black"
+              className="flex w-full justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary"
               value="CS 011"
             >
               CS 011
             </ToggleGroupItem>
             <ToggleGroupItem
-              className="flex w-full items-center justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary data-[state=on]:text-black"
+              className="flex w-full justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary"
               value="CS 061"
             >
               CS 061
             </ToggleGroupItem>
             <ToggleGroupItem
-              className="flex w-full items-center justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary data-[state=on]:text-black"
+              className="flex w-full justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary"
               value="CS 100"
             >
               CS 100
             </ToggleGroupItem>
             <ToggleGroupItem
-              className="flex w-full items-center justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary data-[state=on]:text-black"
+              className="flex w-full justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary"
               value="CS 111"
             >
               CS 111
             </ToggleGroupItem>
             <ToggleGroupItem
-              className="flex w-full items-center justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary data-[state=on]:text-black"
+              className="flex w-full justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary"
               value="CS 141"
             >
               CS 141
@@ -112,14 +109,14 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({
           </ToggleGroup>
         </div>
 
-        <div className="flex w-full items-center justify-center pb-6 md:justify-end md:space-x-4 md:pb-0">
+        <div className="flex w-full justify-center pb-3 md:justify-end md:space-x-4 md:pb-0">
           <button
             onClick={() => onNavigate(Navigate.PREVIOUS)}
             className="order-1 text-2xl text-ula-blue-primary transition hover:-translate-x-1 md:text-3xl"
           >
-            <BsArrowLeft />
+            <BsArrowLeft className = "md:scale-100 scale-150"/>
           </button>
-          <div className="order-2 w-fit px-4 text-3xl text-ula-blue-primary md:px-0 md:text-4xl">
+          <div className="order-2 w-fit px-4 text-5xl text-ula-blue-primary md:px-0 md:text-4xl">
             {monthNums[date.getMonth()]} /{" "}
             {date.getFullYear().toString().substring(2)}
           </div>
@@ -127,10 +124,13 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({
             onClick={() => onNavigate(Navigate.NEXT)}
             className="order-3 text-2xl text-ula-blue-primary transition hover:translate-x-1 md:text-3xl"
           >
-            <BsArrowRight />
+            <BsArrowRight className = "md:scale-100 scale-150"/>
           </button>
         </div>
       </div>
+      {view == "week" && (
+        <div className="pb-4 md:text-left text-center">*Note that the calendar is updated weekly</div>
+      )}
       {view == "day" && (
         <div
           className={`text-center text-3xl font-bold text-black ${isToday ? "rounded-md bg-ula-blue-primary text-white" : "rounded-md border-2 border-black"}`}
