@@ -114,7 +114,7 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({
             onClick={() => onNavigate(Navigate.PREVIOUS)}
             className="order-1 text-2xl text-ula-blue-primary transition hover:-translate-x-1 md:text-3xl"
           >
-            <BsArrowLeft className = "md:scale-100 scale-150"/>
+            <BsArrowLeft className="scale-150 md:scale-100" />
           </button>
           <div className="order-2 w-fit px-4 text-5xl text-ula-blue-primary md:px-0 md:text-4xl">
             {monthNums[date.getMonth()]} /{" "}
@@ -124,12 +124,14 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({
             onClick={() => onNavigate(Navigate.NEXT)}
             className="order-3 text-2xl text-ula-blue-primary transition hover:translate-x-1 md:text-3xl"
           >
-            <BsArrowRight className = "md:scale-100 scale-150"/>
+            <BsArrowRight className="scale-150 md:scale-100" />
           </button>
         </div>
       </div>
       {view == "week" && (
-        <div className="pb-4 md:text-left text-center">*Note that the calendar is updated weekly</div>
+        <div className="pb-4 text-center md:text-left">
+          *Note that the calendar is updated weekly
+        </div>
       )}
       {view == "day" && (
         <div

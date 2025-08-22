@@ -54,13 +54,34 @@ export type CalendarEvent = {
 };
 
 export const calendarSources = [
-  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS009, eventType: "CS 009ABC" },
-  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS010, eventType: "CS 010ABC" },
-  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS011, eventType: "CS 011" },
-  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS061, eventType: "CS 061" },
-  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS100, eventType: "CS 100" },
-  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS111, eventType: "CS 111" },
-  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS141, eventType: "CS 141" },
+  {
+    id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS009,
+    eventType: "CS 009ABC",
+  },
+  {
+    id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS010,
+    eventType: "CS 010ABC",
+  },
+  {
+    id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS011,
+    eventType: "CS 011",
+  },
+  {
+    id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS061,
+    eventType: "CS 061",
+  },
+  {
+    id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS100,
+    eventType: "CS 100",
+  },
+  {
+    id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS111,
+    eventType: "CS 111",
+  },
+  {
+    id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS141,
+    eventType: "CS 141",
+  },
 ];
 
 const localizer = momentLocalizer(moment);
@@ -177,8 +198,10 @@ const CalendarCall = () => {
 
   return (
     <div>
-      <div className="w-11/12 mx-auto my-4 flex flex-col text-center md:flex-row md:justify-between text-nowrap text-6xl font-bold text-ula-blue-primary">
-        <div className = "md:pb-0 pb-6">{currentMonth}, {currentYear}</div>
+      <div className="mx-auto my-4 flex w-11/12 flex-col text-nowrap text-center text-6xl font-bold text-ula-blue-primary md:flex-row md:justify-between">
+        <div className="pb-6 md:pb-0">
+          {currentMonth}, {currentYear}
+        </div>
         <div className="flex justify-center rounded-xl border-2 border-black px-2 text-xl text-black">
           <button
             onClick={() => setIsDay(false)}
