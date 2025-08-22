@@ -15,7 +15,7 @@ const CustomDayHeader = ({ date }: { date: Date }) => {
 
   return (
     <div
-      className={`flex cursor-default items-center justify-center px-10 pt-3 text-s md:text-3xl ${isToday ? "rounded-md bg-ula-blue-primary pb-2 text-white" : "pb-12 text-black"}`}
+      className={`text-s flex cursor-default items-center justify-center px-10 pt-3 md:text-3xl ${isToday ? "rounded-md bg-ula-blue-primary pb-2 text-white" : "pb-12 text-black"}`}
     >
       {day}
       <span className="hidden md:inline">&nbsp;{dayNum}</span>

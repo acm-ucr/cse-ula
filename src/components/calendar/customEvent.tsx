@@ -72,7 +72,7 @@ const CalendarEventDialog = ({
 
   return (
     <Dialog>
-      <div className="text-s flex h-full cursor-default flex-col rounded-2xl border-2 border-black bg-ula-blue-accent px-2 py-3 text-white w-full">
+      <div className="text-s flex h-full w-full cursor-default flex-col rounded-2xl border-2 border-black bg-ula-blue-accent px-2 py-3 text-white">
         <DialogTrigger className="cursor-pointer whitespace-nowrap text-left hover:opacity-50">
           <div className="overflow-hidden text-ellipsis">
             {hasStartTime && timeRangeDisplay}
@@ -91,22 +91,10 @@ const CalendarEventDialog = ({
             {title}
           </div>
           <div className="rounded-b-xl bg-white px-10 text-lg">
-            <ul className="list-disc pb-4 pl-10 space-y-4 marker:text-2xl marker:text-ula-blue-accent">
-              {hasStartTime && (
-                <li>
-                  {timeRangeDisplay}
-                </li>
-              )}
-              {hasLocation && (
-                <li>
-                 {location}
-                </li>
-              )}
-              {description && (
-                <li>
-                  {description}
-                </li>
-              )}
+            <ul className="list-disc space-y-4 pb-4 pl-10 marker:text-2xl marker:text-ula-blue-accent">
+              {hasStartTime && <li>{timeRangeDisplay}</li>}
+              {hasLocation && <li>{location}</li>}
+              {description && <li>{description}</li>}
             </ul>
           </div>
         </DialogContent>
