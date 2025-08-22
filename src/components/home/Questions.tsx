@@ -26,7 +26,7 @@ const Questions = () => {
             duration: 0.65,
             ease: "easeInOut",
           }}
-          whileHover={{ scale: 1.02 }}
+          whileHover={{ scale: 1.03, transition: { duration: 0.6 } }}
         >
           <InfoButton icon={blueBook} text="Browse Courses" link="/about" />
         </motion.div>
@@ -50,7 +50,7 @@ const Questions = () => {
             duration: 0.65,
             ease: "easeInOut",
           }}
-          whileHover={{ scale: 1.02 }}
+          whileHover={{ scale: 1.03, transition: { duration: 0.6 } }}
         >
           <InfoButton icon={baselinePeople} text="Meet the ULAs" link="/ula" />
         </motion.div>

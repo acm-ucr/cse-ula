@@ -3,7 +3,9 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import Header from "@/components/Header";
 
-const hoverEffect = { whileHover: { scale: 1.05 } };
+const hoverEffect = {
+  whileHover: { scale: 1.03, transition: { duration: 0.6 } },
+};
 
 const Citations = () => {
   return (
