@@ -192,6 +192,7 @@ const CalendarCall = () => {
         location={resource.location}
         description={resource.description}
         eventType={resource.eventType}
+        isDayView={isDay}
       />
     );
   };

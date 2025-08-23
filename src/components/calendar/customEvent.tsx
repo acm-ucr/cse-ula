@@ -18,6 +18,7 @@ interface CalendarEventDialogProps {
   location?: string;
   description?: string;
   eventType: string;
+  isDayView: boolean;
 }
 
 const CalendarEventDialog = ({
@@ -27,6 +28,7 @@ const CalendarEventDialog = ({
   location,
   description,
   eventType,
+  isDayView,
 }: CalendarEventDialogProps) => {
   let eventStartDate = new Date();
   let eventEndDate = new Date();
@@ -72,22 +74,28 @@ const CalendarEventDialog = ({
 
   return (
     <Dialog>
-      <div className="text-s flex h-full w-full cursor-default flex-col rounded-2xl border-2 border-black bg-ula-blue-accent px-2 py-3 text-white">
+      <div className="flex h-full w-full flex-col rounded-2xl border-2 border-black bg-ula-blue-accent px-2 py-3 text-white">
         <DialogTrigger className="cursor-pointer whitespace-nowrap text-left hover:opacity-50">
-          <div className="overflow-hidden text-ellipsis">
+          <div
+            className={`overflow-hidden text-ellipsis ${isDayView ? "text-[100%]" : "text-[40%] md:text-[100%]"}`}
+          >
             {hasStartTime && timeRangeDisplay}
           </div>
-          <div className="overflow-hidden text-ellipsis text-[90%]">
+          <div
+            className={`overflow-hidden text-ellipsis ${isDayView ? "text-[90%]" : "text-[30%] md:text-[90%]"}`}
+          >
             {eventType}
           </div>
-          <div className="overflow-hidden text-ellipsis whitespace-nowrap text-[90%]">
+          <div
+            className={`overflow-hidden text-ellipsis whitespace-nowrap ${isDayView ? "text-[90%]" : "text-[30%] md:text-[90%]"}`}
+          >
             {location ? location : "No location"}
           </div>
         </DialogTrigger>
       </div>
       <DialogOverlay className="bg-gray-400/50">
         <DialogContent className="z-50 w-[80vw] bg-white p-0 shadow-md md:w-[40vw] 2xl:w-[30vw]">
-          <div className="rounded-t-md bg-ula-blue-accent px-10 py-3 text-xl text-white">
+          <div className="text-wrap rounded-t-md bg-ula-blue-accent px-10 py-3 text-xl text-white">
             {title}
           </div>
           <div className="rounded-b-xl bg-white px-10 text-lg">

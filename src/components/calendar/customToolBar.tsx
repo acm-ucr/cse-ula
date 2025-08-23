@@ -42,7 +42,7 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({
 
   return (
     <div>
-      <div className="mx-auto flex w-full flex-col items-center justify-between pb-4 md:flex-row">
+      <div className="mx-auto flex w-full flex-col items-center justify-between pb-4 lg:flex-row">
         <div className="flex justify-start">
           <ToggleGroup
             type="multiple"
@@ -109,22 +109,22 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({
           </ToggleGroup>
         </div>
 
-        <div className="flex w-full justify-center pb-3 md:justify-end md:space-x-4 md:pb-0">
+        <div className="flex w-full justify-center text-wrap py-3 lg:justify-end lg:space-x-4 lg:py-0">
           <button
             onClick={() => onNavigate(Navigate.PREVIOUS)}
-            className="order-1 text-2xl text-ula-blue-primary transition hover:-translate-x-1 md:text-3xl"
+            className="order-1 text-2xl text-ula-blue-primary transition hover:-translate-x-1 lg:text-3xl"
           >
-            <BsArrowLeft className="scale-150 md:scale-100" />
+            <BsArrowLeft className="scale-150 lg:scale-100" />
           </button>
-          <div className="order-2 w-fit px-4 text-5xl text-ula-blue-primary md:px-0 md:text-4xl">
+          <div className="order-2 w-fit px-4 text-5xl text-ula-blue-primary lg:px-0 lg:text-4xl">
             {monthNums[date.getMonth()]} /{" "}
             {date.getFullYear().toString().substring(2)}
           </div>
           <button
             onClick={() => onNavigate(Navigate.NEXT)}
-            className="order-3 text-2xl text-ula-blue-primary transition hover:translate-x-1 md:text-3xl"
+            className="order-3 text-2xl text-ula-blue-primary transition hover:translate-x-1 lg:text-3xl"
           >
-            <BsArrowRight className="scale-150 md:scale-100" />
+            <BsArrowRight className="scale-150 lg:scale-100" />
           </button>
         </div>
       </div>
