@@ -1,10 +1,14 @@
 "use client";
-
+import { motion } from "motion/react";
 import CountUp from "react-countup";
 
 const Progress = () => {
   return (
-    <div className="mb-8 flex w-full flex-col items-center justify-center bg-ula-blue-primary py-6">
+    <motion.div 
+      initial={{ clipPath: "inset(50% 0% 50% 0%)" }}
+      whileInView={{ clipPath: "inset(0% 0% 0% 0%)" }}
+      transition={{ duration: 1.0, ease: "easeOut" }}
+    className="mb-8 flex w-full flex-col items-center justify-center bg-ula-blue-primary py-6">
       <p className="flex w-full justify-center p-8 text-center font-bold text-white sm:text-4xl">
         The UCR CS ULA program started in Fall 2021. Since then we have…
       </p>
@@ -26,7 +30,7 @@ const Progress = () => {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default Progress;
