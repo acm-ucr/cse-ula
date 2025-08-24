@@ -10,8 +10,8 @@ import moment from "moment";
 import { useQuery } from "@tanstack/react-query";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import CustomToolbar from "./customToolBar";
-import CustomEventPopover from "./customEvent";
-import CustomDayHeader from "./customDayHeader";
+import CustomEventPopover from "@/components/calendar/customEvent";
+import CustomDayHeader from "@/components/calendar/customDayHeader";
 
 export function useWindowWidth() {
   const [width, setWidth] = useState(
@@ -102,6 +102,10 @@ const CalendarCall = () => {
   );
   const isMobile = useWindowWidth() < 768;
 
+  useEffect(() => {
+    setIsDay(isMobile);
+  }, [isMobile]);
+
   const { data, isLoading } = useQuery<{
     allEvents: TypedGoogleEventProps[];
     futureEvents: TypedGoogleEventProps[];
@@ -110,10 +114,10 @@ const CalendarCall = () => {
     queryFn: async () => {
       const now = new Date();
       const tenWeeksAgo = new Date(
-        now.getTime() - 60 * 60 * 24 * 7 * 10 * 1000,
+        now.getTime() - 60 * 60 * 24 * 7 * 5 * 1000,
       ).toISOString();
       const tenWeeksAhead = new Date(
-        now.getTime() + 60 * 60 * 24 * 7 * 10 * 1000,
+        now.getTime() + 60 * 60 * 24 * 7 * 5 * 1000,
       ).toISOString();
 
       const results = await Promise.all(
@@ -227,7 +231,7 @@ const CalendarCall = () => {
           Loading...
         </div>
       ) : (
-        <div className="rounded-calendar-top mx-auto h-[150vh] w-11/12 pb-8">
+        <div className="rounded-calendar-top mx-auto h-[120vh] w-11/12 pb-8">
           <RBCalendar
             key={isDay ? "CalendarDay" : "CalendarWeek"}
             localizer={localizer}
