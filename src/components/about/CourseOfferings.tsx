@@ -1,41 +1,86 @@
+"use client";
 import CourseOfferingCard from "@/components/about/CourseOfferingCard";
 import Header from "@/components/Header";
 import { courses } from "@/data/CourseOfferings";
+import { motion } from "motion/react";
 
 const CourseOfferings = () => {
   return (
     <div className="mb-6 flex w-full flex-col items-center justify-center bg-ula-blue-highlight py-8">
-      <Header text="Course Offerings" />
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <Header text="Course Offerings" />
+      </motion.div>
       <div className="w-11/12 flex-col place-items-center py-10 text-center text-base md:w-2/3 lg:text-xl">
-        <p className="pb-4">
+        <motion.div
+          className="pb-4"
+          initial={{ opacity: 0, y: 40, scale: 0.9 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{
+            duration: 0.6,
+            ease: "easeOut",
+          }}
+        >
           Our ULAs are here to support you through office hours, and directly in
           lab sections.
-        </p>
-        <p>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 40, scale: 0.9 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{
+            duration: 0.6,
+            ease: "easeOut",
+          }}
+        >
           Starting Week 2 of each quarter, each class listed below will have one
           or more ULAs there to offer you direct assistance!
-        </p>
+        </motion.div>
       </div>
       <div className="hidden flex-wrap justify-center gap-8 sm:flex">
         {courses.map((course, index) => (
-          <CourseOfferingCard
-            course={course.name}
+          <motion.div
+            className="aspect-[11/12] sm:w-1/5"
             key={index}
-            color={[0, 2, 5].includes(index) ? "blue" : "yellow"}
-          />
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.8 }}
+            initial={{ opacity: 0, y: 40, scale: 0.9 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{
+              duration: 0.6,
+              ease: "easeOut",
+            }}
+          >
+            <CourseOfferingCard
+              course={course.name}
+              color={[0, 2, 5].includes(index) ? "blue" : "yellow"}
+            />
+          </motion.div>
         ))}
       </div>
       <div className="flex flex-wrap justify-center gap-8 sm:hidden">
         {courses.map((course, index) => (
-          <CourseOfferingCard
-            course={course.name}
+          <motion.div
+            className="flex aspect-[11/12] w-1/3"
             key={index}
-            color={[0, 3, 4].includes(index) ? "blue" : "yellow"}
-          />
+            whileTap={{ scale: 0.8 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              ease: "easeOut",
+            }}
+          >
+            <CourseOfferingCard
+              course={course.name}
+              color={[0, 3, 4].includes(index) ? "blue" : "yellow"}
+            />
+          </motion.div>
         ))}
       </div>
     </div>
   );
 };
-
 export default CourseOfferings;
