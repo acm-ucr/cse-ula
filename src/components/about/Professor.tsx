@@ -22,7 +22,7 @@ const Professor = () => {
       <motion.div
         initial={{ x: -100 }}
         whileInView={{ x: 0 }}
-        transition={{ duration: 1.4 }}
+        transition={{ duration: 1.0 }}
       >
         <FadeIn>
           <Image
@@ -37,7 +37,7 @@ const Professor = () => {
         <motion.div
           initial={{ x: 100 }}
           whileInView={{ x: 0 }}
-          transition={{ duration: 1.4 }}
+          transition={{ duration: 1.0 }}
         >
           <FadeIn>
             <p className="font-xl text-left text-lg text-black xl:text-2xl">
@@ -52,7 +52,7 @@ const Professor = () => {
         <motion.div
           initial={{ y: 45 }}
           whileInView={{ y: 0 }}
-          transition={{ duration: 1.4 }}
+          transition={{ duration: 1.0 }}
         >
           <FadeIn>
             <p className="font-xs mt-2 text-right font-semibold text-black xl:text-xl">
