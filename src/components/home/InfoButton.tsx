@@ -15,7 +15,7 @@ const InfoButton = ({ icon, text, link }: infoButtonProps) => {
       <div className="m-4 ml-auto flex justify-evenly px-4 py-5 shadow-lg">
         <div className="flex gap-5">
           <Image src={icon} alt="icon" className="h-8 w-8" />
-          <p className="whitespace-nowrap text-lg">{text}</p>
+          <p className="text-md whitespace-nowrap md:text-lg">{text}</p>
         </div>
 
         <Image src={arrow} alt="arrow" className="ml-auto" />

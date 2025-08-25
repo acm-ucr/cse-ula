@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import landingPage from "@/public/home/WCHLanding.webp";
+import { motion } from "motion/react";
 
 const Landing = () => {
   return (
@@ -10,11 +12,16 @@ const Landing = () => {
         layout="fill"
         objectFit="cover"
       />
-      <div className="absolute flex h-full w-full items-center justify-center">
+      <motion.div
+        className="absolute flex h-full w-full items-center justify-center"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut", type: "tween" }}
+      >
         <div className="flex h-1/3 w-1/3 place-items-center justify-center border-b-4 border-ula-yellow-primary text-center text-4xl font-bold text-white xl:text-6xl">
           UCR CSE's Undergraduate Learning Assistants
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

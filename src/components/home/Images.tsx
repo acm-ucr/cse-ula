@@ -1,15 +1,25 @@
+"use client";
+
 import ulaPic1 from "@/public/home/ulaPic1.webp";
 import ulaPic2 from "@/public/home/ulaPic2.webp";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 const Images = () => {
   return (
     <div className="flex flex-col place-items-center gap-8 py-12">
       <div className="w-1/2 border-b-2 border-ula-blue-primary md:border-b-4" />
-      <div className="flex w-5/6 flex-col justify-center gap-8 md:w-1/3 md:flex-row">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{
+          duration: 1.2,
+        }}
+        className="flex w-5/6 flex-col justify-center gap-8 md:w-1/3 md:flex-row"
+      >
         <Image src={ulaPic1} alt="Ula Picture 1" />
         <Image src={ulaPic2} alt="Ula Picture 2" />
-      </div>
+      </motion.div>
     </div>
   );
 };
