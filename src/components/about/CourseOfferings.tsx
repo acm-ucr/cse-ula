@@ -20,6 +20,7 @@ const CourseOfferings = () => {
         {courses.map((course, index) => (
           <CourseOfferingCard
             course={course.name}
+            desc={course.desc}
             key={index}
             color={[0, 2, 5].includes(index) ? "blue" : "yellow"}
           />
@@ -29,6 +30,7 @@ const CourseOfferings = () => {
         {courses.map((course, index) => (
           <CourseOfferingCard
             course={course.name}
+            desc={course.desc}
             key={index}
             color={[0, 3, 4].includes(index) ? "blue" : "yellow"}
           />
