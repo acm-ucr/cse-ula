@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 const headerAnimation = {
   initial: { opacity: 0, x: -20 },
   whileInView: { opacity: 1, x: 0 },
-  transition: { duration: 0.5 },
+  transition: { duration: 0.5, delay: 0.2 },
 };
 
 const itemAnimation = (delay = 0) => ({
@@ -24,25 +24,25 @@ export default function HelpInCourses() {
 
       <div className="mt-5 grid grid-cols-1 justify-items-start gap-2 pl-10 font-semibold md:grid-cols-2 md:justify-items-center md:gap-14 md:pl-0 md:text-lg">
         <ul className="space-y-2">
-          <motion.li {...itemAnimation(0)} viewport={{ once: true }}>
+          <motion.li {...itemAnimation(0.3)} viewport={{ once: true }}>
             ✓ Python: CS 9A, 9B, 9C
           </motion.li>
-          <motion.li {...itemAnimation(0.08)} viewport={{ once: true }}>
+          <motion.li {...itemAnimation(0.4)} viewport={{ once: true }}>
             ✓ Software: CS 10A, 10B, 10C
           </motion.li>
-          <motion.li {...itemAnimation(0.16)} viewport={{ once: true }}>
+          <motion.li {...itemAnimation(0.5)} viewport={{ once: true }}>
             ✓ Discrete Math: CS 011 / MATH 011
           </motion.li>
         </ul>
 
         <ul className="space-y-2">
-          <motion.li {...itemAnimation(0.24)} viewport={{ once: true }}>
+          <motion.li {...itemAnimation(0.6)} viewport={{ once: true }}>
             ✓ Algorithms: CS 111, 141
           </motion.li>
-          <motion.li {...itemAnimation(0.32)} viewport={{ once: true }}>
+          <motion.li {...itemAnimation(0.7)} viewport={{ once: true }}>
             ✓ Computer Systems: CS 61
           </motion.li>
-          <motion.li {...itemAnimation(0.4)} viewport={{ once: true }}>
+          <motion.li {...itemAnimation(0.8)} viewport={{ once: true }}>
             ✓ Software Construction: CS 100
           </motion.li>
         </ul>
