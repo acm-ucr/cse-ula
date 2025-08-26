@@ -6,30 +6,30 @@ interface course {
 export const courses: course[] = [
   {
     name: "9 series",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra odio sit amet consequat accumsan. Vivamus non sodales urna.",
+    desc: "Covers Python programming fundamentals, problem-solving, and C++ concepts through application-based tasks.",
   },
   {
     name: "10 series",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra odio sit amet consequat accumsan. Vivamus non sodales urna.",
+    desc: "Covers C++ programming, problem-solving, data structures, algorithms, and object-oriented principles.",
   },
   {
     name: "CS011",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra odio sit amet consequat accumsan. Vivamus non sodales urna.",
-  },
-  {
-    name: "CS111",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra odio sit amet consequat accumsan. Vivamus non sodales urna.",
-  },
-  {
-    name: "CS141",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra odio sit amet consequat accumsan. Vivamus non sodales urna.",
+    desc: "Covers discrete mathematics, logic, sets, functions, number theory, probability.",
   },
   {
     name: "CS061",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra odio sit amet consequat accumsan. Vivamus non sodales urna.",
+    desc: "Covers computer organization, logic, memory, I/O, instructions, and assembly programming.",
   },
   {
     name: "CS100",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra odio sit amet consequat accumsan. Vivamus non sodales urna.",
+    desc: "Covers software system development, design, languages, tools, testing, debugging, and ethics.",
+  },
+  {
+    name: "CS111",
+    desc: "Covers discrete structures, asymptotics, recurrences, generating functions, graphs, trees, and number theory.",
+  },
+  {
+    name: "CS141",
+    desc: "Covers algorithm analysis, design techniques, and data structures for trees, strings, and graphs.",
   },
 ];
