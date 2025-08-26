@@ -15,7 +15,6 @@ const ULAMapping = () => {
           transition={{
             duration: 0.8,
             delay: index * 0.075,
-            ease: "easeInOut",
           }}
           className="relative m-4 flex w-10/12 cursor-pointer flex-col items-center justify-center lg:w-1/4"
         >

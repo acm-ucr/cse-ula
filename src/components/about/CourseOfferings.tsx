@@ -21,7 +21,6 @@ const CourseOfferings = () => {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{
             duration: 0.6,
-            ease: "easeOut",
           }}
         >
           Our ULAs are here to support you through office hours, and directly in
@@ -32,7 +31,6 @@ const CourseOfferings = () => {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{
             duration: 0.6,
-            ease: "easeOut",
           }}
         >
           Starting Week 2 of each quarter, each class listed below will have one
@@ -50,7 +48,6 @@ const CourseOfferings = () => {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{
               duration: 0.6,
-              ease: "easeOut",
             }}
           >
             <CourseOfferingCard
@@ -70,7 +67,6 @@ const CourseOfferings = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.6,
-              ease: "easeOut",
             }}
           >
             <CourseOfferingCard
