@@ -1,7 +1,7 @@
 "use client";
 import CourseOfferingCard from "@/components/about/CourseOfferingCard";
 import Header from "@/components/Header";
-import { courses } from "@/data/CourseOfferings";
+import { courses } from "@/data/CourseOfferingsData";
 import { motion } from "motion/react";
 
 const CourseOfferings = () => {
