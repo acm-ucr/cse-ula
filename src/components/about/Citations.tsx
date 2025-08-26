@@ -13,7 +13,7 @@ const Citations = () => {
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.6 }}
       >
         <Header text="Citations" />
       </motion.div>
@@ -21,7 +21,7 @@ const Citations = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.6 }}
         className="mt-6 flex justify-center px-4 text-black"
       >
         <div className="mb-6 w-2/3 text-center text-xl font-bold md:w-1/2">

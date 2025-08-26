@@ -14,7 +14,6 @@ const Questions = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{
             duration: 0.55,
-            ease: "easeInOut",
           }}
         >
           <InfoButtonHeader text="What courses can I get help with?" />
@@ -37,7 +36,6 @@ const Questions = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{
             duration: 0.55,
-            ease: "easeInOut",
           }}
         >
           <InfoButtonHeader text="Who are the ULAs?" />
@@ -46,7 +44,7 @@ const Questions = () => {
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{
-            duration: 0.6,
+            duration: 0.65,
           }}
           whileHover={{ scale: 1.03 }}
         >
