@@ -30,8 +30,7 @@ const Citations = () => {
             className="my-8 text-base font-normal tracking-wide"
             {...hoverEffect}
             transition={{
-              duration: 0.65,
-              ease: "easeInOut",
+              duration: 0.6,
             }}
           >
             <Link
