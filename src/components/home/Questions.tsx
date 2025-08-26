@@ -45,7 +45,6 @@ const Questions = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{
             duration: 0.65,
-            ease: "easeInOut",
           }}
           whileHover={{ scale: 1.03 }}
         >
