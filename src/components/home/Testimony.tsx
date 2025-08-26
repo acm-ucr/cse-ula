@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "motion/react";
+import { testimonySections } from "@/data/Testimonies";
 import Header from "@/components/Header";
 import Card from "@/components/home/Card";
-import { testimonySections } from "@/data/Testimonies";
 
 const Testimony = () => {
   return (
