@@ -1,4 +1,3 @@
-// data/Testimonies.ts
 export interface Testimony {
   name: string;
   quote: string;
