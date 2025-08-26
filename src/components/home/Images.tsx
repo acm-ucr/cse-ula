@@ -5,21 +5,25 @@ import ulaPic2 from "@/public/home/ulaPic2.webp";
 import Image from "next/image";
 import { motion } from "motion/react";
 
+const imageAnimation = (delay = 0) => ({
+  initial: { opacity: 0, x: -20 },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.6, delay },
+});
+
 const Images = () => {
   return (
     <div className="flex flex-col place-items-center gap-8 py-12">
       <div className="w-1/2 border-b-2 border-ula-blue-primary md:border-b-4" />
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{
-          duration: 1.2,
-        }}
-        className="flex w-5/6 flex-col justify-center gap-8 md:w-1/3 md:flex-row"
-      >
-        <Image src={ulaPic1} alt="Ula Picture 1" />
-        <Image src={ulaPic2} alt="Ula Picture 2" />
-      </motion.div>
+      <div className="flex w-5/6 flex-col justify-center gap-8 md:w-1/3 md:flex-row">
+        <motion.div {...imageAnimation(0.3)}>
+          <Image src={ulaPic1} alt="Ula Picture 1" />
+        </motion.div>
+
+        <motion.div {...imageAnimation(0.4)}>
+          <Image src={ulaPic2} alt="Ula Picture 2" />
+        </motion.div>
+      </div>
     </div>
   );
 };
