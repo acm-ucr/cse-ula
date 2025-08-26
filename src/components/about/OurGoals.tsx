@@ -11,7 +11,7 @@ const OurGoals = () => {
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.6 }}
       >
         <Header text="Our Goals" />
       </motion.div>
@@ -25,7 +25,6 @@ const OurGoals = () => {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{
               duration: 0.6,
-              ease: "easeOut",
               delay: index * 0.2,
             }}
           >

@@ -1,18 +1,46 @@
+"use client";
+import { motion } from "motion/react";
+import { useState } from "react";
+
 type CourseOfferingCardProps = {
   course: string;
+  desc: string;
   color: "blue" | "yellow";
 };
 
-const CourseOfferingCard = ({ course, color }: CourseOfferingCardProps) => {
+const CourseOfferingCard = ({
+  course,
+  desc,
+  color,
+}: CourseOfferingCardProps) => {
+  const [flipped, setFlipped] = useState(false);
+
   const bgColor =
     color === "blue" ? "bg-ula-blue-accent" : "bg-ula-yellow-accent";
 
   return (
-    <div
-      className={`flex aspect-[11/12] w-1/3 items-center justify-center rounded-xl sm:w-1/5 ${bgColor} p-2 text-center text-2xl font-semibold md:text-4xl`}
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.5 }}
+      animate={{ rotateY: flipped ? 180 : 0 }}
+      onClick={() => setFlipped((prevState) => !prevState)}
+      style={{ transformStyle: "preserve-3d" }}
+      className={`flex h-full w-full cursor-pointer items-center justify-center rounded-xl ${bgColor} p-2`}
     >
-      {course}
-    </div>
+      <div
+        style={{ backfaceVisibility: "hidden", transform: "rotateY(0deg)" }}
+        className="absolute text-center text-2xl font-semibold md:text-4xl"
+      >
+        {course}
+      </div>
+
+      <div
+        className="sm:text-md text-center text-xs font-semibold lg:text-lg"
+        style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
+      >
+        {desc}
+      </div>
+    </motion.div>
   );
 };
 
