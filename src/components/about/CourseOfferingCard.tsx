@@ -25,7 +25,7 @@ const CourseOfferingCard = ({
       animate={{ rotateY: flipped ? 180 : 0 }}
       onClick={() => setFlipped((prevState) => !prevState)}
       style={{ transformStyle: "preserve-3d" }}
-      className={`flex aspect-[11/12] w-1/3 items-center justify-center rounded-xl sm:w-1/5 ${bgColor} p-2`}
+      className={`flex h-full w-full cursor-pointer items-center justify-center rounded-xl ${bgColor} p-2`}
     >
       <div
         style={{ backfaceVisibility: "hidden", transform: "rotateY(0deg)" }}
@@ -35,7 +35,7 @@ const CourseOfferingCard = ({
       </div>
 
       <div
-        className="text-center text-xs font-semibold md:text-lg"
+        className="sm:text-md text-center text-xs font-semibold lg:text-lg"
         style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
       >
         {desc}
