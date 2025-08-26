@@ -19,25 +19,48 @@ const FadeIn = ({ children }: { children: React.ReactNode }) => {
 const Professor = () => {
   return (
     <div className="mx-8 mb-4 flex flex-row justify-center gap-8 xl:flex-row xl:items-center">
-      <FadeIn>
-        <Image
-          src={professorImage}
-          alt="Professor Watkinson Medina"
-          className="font-sm mb-4 w-full rounded-md xl:w-3/4"
-        />
-      </FadeIn>
+      <motion.div
+        initial={{ x: -100 }}
+        whileInView={{ x: 0 }}
+        transition={{ duration: 1.0 }}
+      >
+        <FadeIn>
+          <Image
+            src={professorImage}
+            alt="Professor Watkinson Medina"
+            className="font-sm mb-4 w-full rounded-md xl:w-3/4"
+          />
+        </FadeIn>
+      </motion.div>
 
-      <FadeIn>
-        <p className="font-xl text-left text-lg text-black xl:text-2xl">
-          "The ULA program is a great chance to make a real difference. Students
-          get more personalized learning that helps with their classes, and ULAs
-          get to grow as educators. All in all, the ULA program is a good thing
-          for everyone who's part of it."
-        </p>
-        <p className="font-xs mt-2 text-right text-black xl:text-xl">
-          - Professor Watkinson Medina
-        </p>
-      </FadeIn>
+      <div className="flex-col">
+        <motion.div
+          initial={{ x: 100 }}
+          whileInView={{ x: 0 }}
+          transition={{ duration: 1.0 }}
+        >
+          <FadeIn>
+            <p className="font-xl text-left text-lg text-black xl:text-2xl">
+              "The ULA program is a great chance to make a real difference.
+              Students get more personalized learning that helps with their
+              classes, and ULAs get to grow as educators. All in all, the ULA
+              program is a good thing for everyone who's part of it."
+            </p>
+          </FadeIn>
+        </motion.div>
+
+        <motion.div
+          initial={{ y: 45 }}
+          whileInView={{ y: 0 }}
+          transition={{ duration: 1.0 }}
+        >
+          <FadeIn>
+            <p className="font-xs mt-2 text-right font-semibold text-black xl:text-xl">
+              - Professor Watkinson Medina
+            </p>
+          </FadeIn>
+        </motion.div>
+      </div>
     </div>
   );
 };
