@@ -10,22 +10,10 @@ type Props = {
   details: string;
 };
 
-type SampleAnimationProps = {
-  children: React.ReactNode;
-  className?: string;
-};
-
-const SampleAnimation = ({ children, className }: SampleAnimationProps) => {
-  return (
-    <motion.div
-      className={className}
-      initial={{ opacity: 0, y: -20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.75 }}
-    >
-      {children}
-    </motion.div>
-  );
+const errorAnimate = {
+  initial: { opacity: 0, y: -20 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.75 },
 };
 
 const ErrorMessage = ({ message, details }: Props) => {
@@ -51,16 +39,19 @@ const ErrorMessage = ({ message, details }: Props) => {
       </div>
 
       <div className="absolute flex h-full w-full flex-col items-center justify-center gap-4">
-        <SampleAnimation className="flex h-1/5 w-1/2 flex-col place-items-center justify-center gap-4 text-center text-white sm:w-1/5">
+        <motion.div
+          {...errorAnimate}
+          className="flex h-1/5 w-1/2 flex-col place-items-center justify-center gap-4 text-center text-white sm:w-1/5"
+        >
           <div className="border-b-4 border-ula-yellow-primary pb-3 text-5xl font-bold xl:text-6xl">
             {message}
           </div>
           <div className="text-xl xl:text-2xl">{details}</div>
-        </SampleAnimation>
+        </motion.div>
 
-        <SampleAnimation>
+        <motion.div {...errorAnimate}>
           <Button text="Return home" link="./" />
-        </SampleAnimation>
+        </motion.div>
       </div>
     </div>
   );
