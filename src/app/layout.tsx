@@ -15,14 +15,12 @@ export const metadata = {
     "Improving the learning experience of students in core CS courses!",
 };
 
-type LayoutProps = {
-  children: React.ReactNode;
-};
+type LayoutProps = { children: React.ReactNode };
 
 export default function RootLayout({ children }: LayoutProps) {
   return (
-    <html lang="en">
-      <body className={firaSans.className}>
+    <html lang="en" className="overflow-x-hidden">
+      <body className={`${firaSans.className} overflow-x-hidden`}>
         <Navbar />
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
         <Footer />
