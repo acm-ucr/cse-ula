@@ -2,7 +2,7 @@
 import ErrorPage from "@/public/error.webp";
 import MobileErrorPage from "@/public/mobileError.webp";
 import Image from "next/image";
-import Button from "./Button";
+import Button from "@/components/Button";
 import { motion } from "motion/react";
 
 type Props = {
