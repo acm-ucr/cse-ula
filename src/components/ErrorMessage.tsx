@@ -21,8 +21,7 @@ const SampleAnimation = ({ children, className }: SampleAnimationProps) => {
       className={className}
       initial={{ opacity: 0, y: -20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.75, ease: "easeOut" }}
-      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 0.75 }}
     >
       {children}
     </motion.div>
