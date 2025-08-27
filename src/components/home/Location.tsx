@@ -21,6 +21,7 @@ const Location = () => {
       whileInView="show"
       viewport={{ amount: 0.3 }}
       className="flex w-full flex-col items-center justify-evenly bg-ula-blue-primary md:flex-row"
+      id="location"
     >
       <div className="flex flex-col items-center gap-8 px-8 pb-4 pt-8 md:w-2/5 md:pb-8">
         <motion.div
