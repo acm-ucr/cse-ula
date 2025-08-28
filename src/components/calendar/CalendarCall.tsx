@@ -1,6 +1,5 @@
 "use client";
-import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import {
   Calendar as RBCalendar,
   momentLocalizer,
@@ -9,9 +8,9 @@ import {
 import moment from "moment";
 import { useQuery } from "@tanstack/react-query";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import CustomToolbar from "./customToolBar";
-import CustomEventPopover from "@/components/calendar/customEvent";
-import CustomDayHeader from "@/components/calendar/customDayHeader";
+import CustomToolbar from "@/components/calendar/CustomToolBar";
+import CustomEventPopover from "@/components/calendar/CustomEvent";
+import CustomDayHeader from "@/components/calendar/CustomDayHeader";
 
 export function useWindowWidth() {
   const [width, setWidth] = useState(
@@ -87,8 +86,8 @@ export const calendarSources = [
 const localizer = momentLocalizer(moment);
 
 const CalendarCall = () => {
-  const [date, setDate] = React.useState<Date | undefined>(new Date());
-  const [isDay, setIsDay] = React.useState<boolean>(false);
+  const [date, setDate] = useState<Date | undefined>(new Date());
+  const [isDay, setIsDay] = useState<boolean>(false);
   const currentMonth = date?.toLocaleDateString("en-US", {
     month: "long",
   });
@@ -97,7 +96,7 @@ const CalendarCall = () => {
     year: "numeric",
   });
 
-  const [selectedClass, setSelectedClass] = React.useState<string[]>(
+  const [selectedClass, setSelectedClass] = useState<string[]>(
     calendarSources.map((source) => source.eventType),
   );
   const isMobile = useWindowWidth() < 768;
@@ -158,7 +157,7 @@ const CalendarCall = () => {
     },
   });
 
-  const calendarEvents = React.useMemo(() => {
+  const calendarEvents = useMemo(() => {
     if (!data?.allEvents) return [];
     return data.allEvents
       .map((event) => {
@@ -195,7 +194,6 @@ const CalendarCall = () => {
         title={event.title}
         location={resource.location}
         description={resource.description}
-        eventType={resource.eventType}
         isDayView={isDay}
       />
     );

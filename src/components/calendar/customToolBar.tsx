@@ -135,7 +135,7 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({
       )}
       {view == "day" && (
         <div
-          className={`text-center text-3xl font-bold text-black ${isToday ? "rounded-md bg-ula-blue-primary text-white" : "rounded-md border-2 border-black"}`}
+          className={`text-center text-3xl font-bold text-black ${isToday ? "rounded-md bg-ula-blue-primary text-white" : "rounded-md"}`}
         >
           {date.toLocaleDateString("en-US", { weekday: "short" }).toUpperCase()}
           <br />
