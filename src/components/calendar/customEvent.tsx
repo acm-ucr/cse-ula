@@ -17,7 +17,6 @@ interface CalendarEventDialogProps {
   title: string;
   location?: string;
   description?: string;
-  eventType: string;
   isDayView: boolean;
 }
 
@@ -27,7 +26,6 @@ const CalendarEventDialog = ({
   title,
   location,
   description,
-  eventType,
   isDayView,
 }: CalendarEventDialogProps) => {
   let eventStartDate = new Date();
@@ -75,21 +73,21 @@ const CalendarEventDialog = ({
   return (
     <Dialog>
       <div className="flex h-full w-full flex-col rounded-2xl border-2 border-black bg-ula-blue-accent px-2 py-3 text-white">
-        <DialogTrigger className="cursor-pointer whitespace-nowrap text-left hover:opacity-50">
+        <DialogTrigger className="cursor-pointer whitespace-nowrap hover:opacity-50">
           <div
-            className={`overflow-hidden text-ellipsis ${isDayView ? "text-[100%]" : "text-[40%] md:text-[100%]"}`}
+            className={`overflow-hidden truncate ${isDayView ? "text-[100%]" : "text-[40%] md:text-[100%]"}`}
           >
             {hasStartTime && timeRangeDisplay}
           </div>
           <div
-            className={`overflow-hidden text-ellipsis ${isDayView ? "text-[90%]" : "text-[30%] md:text-[90%]"}`}
+            className={`overflow-hidden truncate ${isDayView ? "text-[90%]" : "text-[30%] md:text-[90%]"}`}
           >
-            {eventType}
+            {title}
           </div>
           <div
-            className={`overflow-hidden text-ellipsis whitespace-nowrap ${isDayView ? "text-[90%]" : "text-[30%] md:text-[90%]"}`}
+            className={`overflow-hidden truncate whitespace-nowrap ${isDayView ? "text-[90%]" : "text-[30%] md:text-[90%]"}`}
           >
-            {location ? location : "No location"}
+            {location && location}
           </div>
         </DialogTrigger>
       </div>
