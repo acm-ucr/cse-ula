@@ -1,7 +1,7 @@
 "use client";
 
 import Card from "@/components/ula/Card";
-import ULAs from "@/data/CurrentULAs";
+import ULAs from "@/data/CurrentULAsData";
 import { motion } from "motion/react";
 
 const ULAMapping = () => {
