@@ -10,13 +10,19 @@ interface ulaCardProps {
   description: string;
 }
 
+const hoverAnimation = {
+  whileHover: { scale: 1.03 },
+  transition: {
+    duration: 0.6,
+  },
+};
+
 const Card = ({ image, name, classes, description }: ulaCardProps) => {
   const [flipped, setFlipped] = useState(false);
 
   return (
     <motion.div
-      whileHover={{ scale: 1.05 }}
-      transition={{ duration: 0.5 }}
+      {...hoverAnimation}
       animate={{ rotateY: flipped ? 180 : 0 }}
       onClick={() => setFlipped((prevState) => !prevState)}
       className="w-full"

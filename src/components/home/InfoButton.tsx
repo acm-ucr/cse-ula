@@ -12,13 +12,13 @@ interface infoButtonProps {
 const InfoButton = ({ icon, text, link }: infoButtonProps) => {
   return (
     <Link href={link}>
-      <div className="m-4 ml-auto flex justify-evenly px-4 py-5 shadow-lg">
+      <div className="m-4 ml-auto flex justify-evenly p-5 shadow-lg">
         <div className="flex gap-5">
-          <Image src={icon} alt="icon" className="h-8 w-8" />
+          <Image src={icon} alt="Icon" className="h-8 w-8" />
           <p className="text-md whitespace-nowrap md:text-lg">{text}</p>
         </div>
 
-        <Image src={arrow} alt="arrow" className="ml-auto" />
+        <Image src={arrow} alt="Arrow" className="ml-auto" />
       </div>
     </Link>
   );

@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { items } from "@/data/NavbarData";
+import navbarItems from "@/data/NavbarData";
 import { usePathname } from "next/navigation";
 import { FaDiscord, FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
@@ -15,7 +15,7 @@ const Navbar = () => {
     <div className="relative bg-ula-blue-primary p-5 font-medium text-white">
       <div className="hidden w-full items-center justify-between md:flex">
         <div className="mx-5 flex gap-8 text-2xl">
-          {items.map(({ name, link }) => (
+          {navbarItems.map(({ name, link }) => (
             <Link
               key={name}
               href={link}
@@ -49,7 +49,7 @@ const Navbar = () => {
         }`}
       >
         <div className="mx-2 flex flex-col items-center gap-6 border-t-2 py-4 text-xl">
-          {items.map(({ name, link }) => (
+          {navbarItems.map(({ name, link }) => (
             <Link
               key={name}
               href={link}

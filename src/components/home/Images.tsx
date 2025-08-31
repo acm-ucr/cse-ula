@@ -13,7 +13,7 @@ const imageAnimation = (delay = 0) => ({
 
 const Images = () => {
   return (
-    <div className="flex flex-col place-items-center gap-8 py-12">
+    <div className="flex flex-col place-items-center gap-8 py-8">
       <div className="w-1/2 border-b-2 border-ula-blue-primary md:border-b-4" />
       <div className="flex w-5/6 max-w-5xl flex-col justify-center gap-8 md:flex-row">
         <motion.div className="md:w-1/2" {...imageAnimation(0.3)}>
