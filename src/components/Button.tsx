@@ -9,14 +9,18 @@ interface buttonProps {
   link: string;
 }
 
+const hoverAnimation = {
+  whileHover: { scale: 1.03 },
+  transition: {
+    duration: 0.6,
+  },
+};
+
 const Button = ({ text, link }: buttonProps) => {
   return (
     <motion.div
       className="rounded-2xl bg-ula-yellow-accent p-3 text-xl font-medium md:text-3xl"
-      whileHover={{ scale: 1.03 }}
-      transition={{
-        duration: 0.6,
-      }}
+      {...hoverAnimation}
     >
       <Link href={link} className="flex flex-row gap-8 pl-2 md:gap-12">
         {text}
