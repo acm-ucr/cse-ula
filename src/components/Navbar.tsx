@@ -44,7 +44,7 @@ const Navbar = () => {
         </button>
       </div>
       <div
-        className={`absolute left-0 top-full z-50 w-full overflow-hidden bg-ula-blue-primary transition-all duration-300 ease-in-out md:hidden ${
+        className={`absolute left-0 top-full z-50 w-full overflow-hidden bg-ula-blue-primary transition-all duration-300 md:hidden ${
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >

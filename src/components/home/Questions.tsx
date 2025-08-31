@@ -14,7 +14,6 @@ const Questions = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{
             duration: 0.55,
-            ease: "easeInOut",
           }}
         >
           <InfoButtonHeader text="What courses can I get help with?" />
@@ -23,12 +22,15 @@ const Questions = () => {
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{
-            duration: 0.65,
-            ease: "easeInOut",
+            duration: 0.6,
           }}
-          whileHover={{ scale: 1.02 }}
+          whileHover={{ scale: 1.03 }}
         >
-          <InfoButton icon={blueBook} text="Browse Courses" link="/about" />
+          <InfoButton
+            icon={blueBook}
+            text="Browse Courses"
+            link="/about#courseOfferings"
+          />
         </motion.div>
       </div>
 
@@ -38,7 +40,6 @@ const Questions = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{
             duration: 0.55,
-            ease: "easeInOut",
           }}
         >
           <InfoButtonHeader text="Who are the ULAs?" />
@@ -48,9 +49,8 @@ const Questions = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{
             duration: 0.65,
-            ease: "easeInOut",
           }}
-          whileHover={{ scale: 1.02 }}
+          whileHover={{ scale: 1.03 }}
         >
           <InfoButton icon={baselinePeople} text="Meet the ULAs" link="/ula" />
         </motion.div>

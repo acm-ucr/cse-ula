@@ -29,6 +29,7 @@ const Professor = () => {
             src={professorImage}
             alt="Professor Watkinson Medina"
             className="font-sm mb-4 w-full rounded-md xl:w-3/4"
+            priority
           />
         </FadeIn>
       </motion.div>

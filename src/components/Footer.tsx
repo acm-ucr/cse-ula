@@ -19,7 +19,7 @@ const Footer = () => {
       </div>
       <div className="flex items-center gap-4">
         <div className="order-2 border-l-2 p-4 text-2xl font-bold sm:order-1 sm:border-l-0 sm:border-r-2">
-          WCH Room 129
+          <Link href="/#location">WCH Room 129</Link>
         </div>
         <Link
           href="https://discord.com/invite/BUvwNdB6eH"
