@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { testimonies } from "@/data/Testimonies";
+import { testimonies } from "@/data/TestimoniesData";
 import Header from "@/components/Header";
 import Card from "@/components/home/Card";
 

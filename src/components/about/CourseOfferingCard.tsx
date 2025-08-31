@@ -20,7 +20,6 @@ const CourseOfferingCard = ({
 
   return (
     <motion.div
-      whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.5 }}
       animate={{ rotateY: flipped ? 180 : 0 }}
       onClick={() => setFlipped((prevState) => !prevState)}

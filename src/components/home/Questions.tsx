@@ -26,7 +26,11 @@ const Questions = () => {
           }}
           whileHover={{ scale: 1.03 }}
         >
-          <InfoButton icon={blueBook} text="Browse Courses" link="/about" />
+          <InfoButton
+            icon={blueBook}
+            text="Browse Courses"
+            link="/about#courseOfferings"
+          />
         </motion.div>
       </div>
 

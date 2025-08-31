@@ -1,7 +1,7 @@
 "use client";
 import CourseOfferingCard from "@/components/about/CourseOfferingCard";
 import Header from "@/components/Header";
-import { courses } from "@/data/CourseOfferings";
+import { courses } from "@/data/CourseOfferingsData";
 import { motion } from "motion/react";
 
 const CourseOfferings = () => {
@@ -11,6 +11,7 @@ const CourseOfferings = () => {
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
+        id="courseOfferings"
       >
         <Header text="Course Offerings" />
       </motion.div>
@@ -42,7 +43,7 @@ const CourseOfferings = () => {
           <motion.div
             className="aspect-[11/12] sm:w-1/5"
             key={index}
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.8 }}
             initial={{ opacity: 0, y: 40, scale: 0.9 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
