@@ -72,7 +72,7 @@ const CalendarEventDialog = ({
 
   return (
     <Dialog>
-      <div className="flex h-full ml-2 flex-col rounded-2xl border-2 border-black bg-ula-blue-accent px-2 py-2 text-white">
+      <div className="ml-2 flex h-full flex-col rounded-2xl border-2 border-black bg-ula-blue-accent px-2 py-2 text-white">
         <DialogTrigger className="cursor-pointer whitespace-nowrap text-left hover:opacity-50">
           <div
             className={`overflow-hidden truncate ${isDayView ? "text-md" : "text-s md:text-md"}`}
