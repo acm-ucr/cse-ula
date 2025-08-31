@@ -79,7 +79,7 @@ export const calendarSources = [
   },
   {
     id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS141,
-    eventType: "CS 141",
+    eventType: "CS 141!",
   },
 ];
 
