@@ -42,7 +42,7 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({
 
   return (
     <div>
-      <div className="mx-auto flex w-full flex-col items-center justify-between pb-4 lg:flex-row">
+      <div className="flex w-full flex-col items-center justify-between pb-4 lg:flex-row">
         <div className="flex justify-start">
           <ToggleGroup
             type="multiple"
@@ -62,7 +62,7 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({
                 setSelectedClass(types);
               }
             }}
-            className="grid grid-flow-col grid-rows-2 gap-2 pb-4 md:flex md:gap-0 md:space-x-2 md:pb-0"
+            className="grid grid-flow-col grid-rows-2 gap-2 pb-4 md:flex md:space-x-2"
           >
             <ToggleGroupItem
               className="flex w-full justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary"
