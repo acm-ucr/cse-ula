@@ -5,14 +5,25 @@ import Header from "@/components/Header";
 import { ourGoalsCard } from "@/data/OurGoalsCardsData";
 import { motion } from "motion/react";
 
+const headerAnimation = {
+  initial: { opacity: 0, x: -50 },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.6 },
+};
+
+const cardsAnimation = (index = 0) => ({
+  initial: { opacity: 0, y: 40, scale: 0.9 },
+  whileInView: { opacity: 1, y: 0, scale: 1 },
+  transition: {
+    duration: 0.6,
+    delay: index * 0.2,
+  },
+});
+
 const OurGoals = () => {
   return (
     <div className="py-8">
-      <motion.div
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6 }}
-      >
+      <motion.div {...headerAnimation}>
         <Header text="Our Goals" />
       </motion.div>
 
@@ -21,12 +32,7 @@ const OurGoals = () => {
           <motion.div
             className="flex justify-center"
             key={index}
-            initial={{ opacity: 0, y: 40, scale: 0.9 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{
-              duration: 0.6,
-              delay: index * 0.2,
-            }}
+            {...cardsAnimation(index)}
           >
             <OurGoalsCard image={image} text={text} />
           </motion.div>
