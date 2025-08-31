@@ -1,7 +1,18 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "motion/react";
 import riversideLogo from "@/public/riversideLogo.webp";
 import { FaDiscord } from "react-icons/fa";
 import Link from "next/link";
+
+const hoverAnimation = {
+  whileHover: { scale: 1.03 },
+  transition: {
+    duration: 0.6,
+  },
+};
+
 const Footer = () => {
   return (
     <div className="flex flex-col-reverse items-center justify-between gap-2 bg-ula-blue-primary p-8 text-white sm:flex-row">
@@ -19,13 +30,17 @@ const Footer = () => {
       </div>
       <div className="flex items-center gap-4">
         <div className="order-2 border-l-2 p-4 text-2xl font-bold sm:order-1 sm:border-l-0 sm:border-r-2">
-          <Link href="/#location">WCH Room 129</Link>
+          <motion.div {...hoverAnimation}>
+            <Link href="/#location">WCH Room 129</Link>
+          </motion.div>
         </div>
         <Link
           href="https://discord.com/invite/BUvwNdB6eH"
           className="order-1 sm:order-2"
         >
-          <FaDiscord size={50} />
+          <motion.div {...hoverAnimation}>
+            <FaDiscord size={50} />
+          </motion.div>
         </Link>
       </div>
     </div>

@@ -2,7 +2,7 @@
 import { motion } from "motion/react";
 import { useState } from "react";
 
-type CourseOfferingCardProps = {
+type courseOfferingCardProps = {
   course: string;
   desc: string;
   color: "blue" | "yellow";
@@ -12,7 +12,7 @@ const CourseOfferingCard = ({
   course,
   desc,
   color,
-}: CourseOfferingCardProps) => {
+}: courseOfferingCardProps) => {
   const [flipped, setFlipped] = useState(false);
 
   const bgColor =

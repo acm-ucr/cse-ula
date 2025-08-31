@@ -5,11 +5,11 @@ interface course {
 
 export const courses: course[] = [
   {
-    name: "9 series",
+    name: "9 Series",
     desc: "Covers Python programming fundamentals, problem-solving, and C++ concepts through application-based tasks.",
   },
   {
-    name: "10 series",
+    name: "10 Series",
     desc: "Covers C++ programming, problem-solving, data structures, algorithms, and object-oriented principles.",
   },
   {
@@ -30,6 +30,6 @@ export const courses: course[] = [
   },
   {
     name: "CS141",
-    desc: "Covers algorithm analysis, design techniques, and data structures for trees, strings, and graphs.",
+    desc: "Covers algorithm analysis, including greedy algorithms, divide and conquer, and dynamic programming.",
   },
 ];
