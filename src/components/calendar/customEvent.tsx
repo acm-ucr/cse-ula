@@ -72,27 +72,27 @@ const CalendarEventDialog = ({
 
   return (
     <Dialog>
-      <div className="flex h-full w-full flex-col rounded-2xl border-2 border-black bg-ula-blue-accent px-2 py-3 text-white">
-        <DialogTrigger className="cursor-pointer whitespace-nowrap hover:opacity-50">
+      <div className="flex h-full ml-2 flex-col rounded-2xl border-2 border-black bg-ula-blue-accent px-2 py-2 text-white">
+        <DialogTrigger className="cursor-pointer whitespace-nowrap text-left hover:opacity-50">
           <div
-            className={`overflow-hidden truncate ${isDayView ? "text-[100%]" : "text-[40%] md:text-[100%]"}`}
+            className={`overflow-hidden truncate ${isDayView ? "text-md" : "text-s md:text-md"}`}
           >
             {hasStartTime && timeRangeDisplay}
           </div>
           <div
-            className={`overflow-hidden truncate ${isDayView ? "text-[90%]" : "text-[30%] md:text-[90%]"}`}
+            className={`overflow-hidden truncate ${isDayView ? "text-md" : "text-s md:text-md"}`}
           >
             {title}
           </div>
           <div
-            className={`overflow-hidden truncate whitespace-nowrap ${isDayView ? "text-[90%]" : "text-[30%] md:text-[90%]"}`}
+            className={`overflow-hidden truncate whitespace-nowrap ${isDayView ? "text-md" : "text-s md:text-md"}`}
           >
             {location && location}
           </div>
         </DialogTrigger>
       </div>
       <DialogOverlay className="bg-gray-400/50">
-        <DialogContent className="z-50 w-[80vw] bg-white p-0 shadow-md md:w-[40vw] 2xl:w-[30vw]">
+        <DialogContent className="z-50 w-5/6 bg-white p-0 shadow-md md:w-2/5 2xl:w-1/3">
           <div className="text-wrap rounded-t-md bg-ula-blue-accent px-10 py-3 text-xl text-white">
             {title}
           </div>

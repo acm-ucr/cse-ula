@@ -15,7 +15,7 @@ const CustomDayHeader = ({ date }: { date: Date }) => {
 
   return (
     <div
-      className={`text-md cursor-default px-10 pt-3 lg:text-3xl ${isToday ? "rounded-md bg-ula-blue-primary pb-2 text-white" : "text-black"}`}
+      className={`text-[10px] cursor-default md:px-4 xl:px-10 pt-3 md:text-xl xl:text-3xl ${isToday ? "rounded-md bg-ula-blue-primary pb-2 text-white" : "text-black"}`}
     >
       {day}
       &nbsp;
