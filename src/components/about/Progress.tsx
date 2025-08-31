@@ -4,7 +4,6 @@ import CountUp from "react-countup";
 
 const Progress = () => {
   return (
-
     <div className="mb-8 flex w-full flex-col items-center justify-center bg-ula-blue-primary py-6">
       <motion.p
         className="flex w-full justify-center p-8 text-center font-bold text-white sm:text-4xl"
@@ -52,7 +51,7 @@ const Progress = () => {
           </motion.p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 export default Progress;
