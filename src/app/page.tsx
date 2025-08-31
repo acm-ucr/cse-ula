@@ -7,14 +7,14 @@ import Testimony from "@/components/home/Testimony";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Landing />
       <HelpInCourses />
       <Location />
       <Questions />
       <Images />
       <Testimony />
-    </div>
+    </>
   );
 };
 

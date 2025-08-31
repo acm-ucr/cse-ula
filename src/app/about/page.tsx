@@ -6,13 +6,13 @@ import Citations from "@/components/about/Citations";
 
 const About = () => {
   return (
-    <div>
+    <>
       <OurGoals />
       <Progress />
       <Professor />
       <CourseOfferings />
       <Citations />
-    </div>
+    </>
   );
 };
 

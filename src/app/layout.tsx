@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@/app/globals.css";
 import { Fira_Sans } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
 import Navbar from "@/components/Navbar";

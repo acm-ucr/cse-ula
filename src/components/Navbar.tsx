@@ -1,32 +1,22 @@
 "use client";
 import Link from "next/link";
-import { items } from "@/data/NavbarData";
+import navbarItems from "@/data/NavbarData";
 import { usePathname } from "next/navigation";
 import { FaDiscord, FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
 import { motion } from "motion/react";
 
-const FadeIn = ({
-  children,
-  delay = 0,
-}: {
-  children: React.ReactNode;
-  delay?: number;
-}) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.5, delay }}
-      viewport={{ once: true }}
-    >
-      {children}
-    </motion.div>
-  );
-};
+const fadeIn = (delay = 0) => ({
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
+  transition: { duration: 0.5, delay },
+});
 
-const hoverEffect = {
-  whileHover: { scale: 1.1, transition: { duration: 0.6 } },
+const hoverAnimation = {
+  whileHover: { scale: 1.05 },
+  transition: {
+    duration: 0.6,
+  },
 };
 
 const Navbar = () => {
@@ -39,9 +29,9 @@ const Navbar = () => {
     <div className="relative bg-ula-blue-primary p-5 font-medium text-white">
       <div className="hidden w-full items-center justify-between md:flex">
         <div className="mx-5 flex gap-8 text-2xl">
-          {items.map(({ name, link }, i) => (
-            <FadeIn delay={i * 0.15}>
-              <motion.div {...hoverEffect}>
+          {navbarItems.map(({ name, link }, i) => (
+            <motion.div {...fadeIn(i * 0.15)}>
+              <motion.div {...hoverAnimation}>
                 <Link
                   key={name}
                   href={link}
@@ -54,14 +44,14 @@ const Navbar = () => {
                   {name}
                 </Link>
               </motion.div>
-            </FadeIn>
+            </motion.div>
           ))}
         </div>
-        <div className="mx-5 text-5xl">
+        <motion.div {...hoverAnimation} className="mx-5 text-5xl">
           <Link href="https://discord.com/invite/BUvwNdB6eH" target="_blank">
             <FaDiscord />
           </Link>
-        </div>
+        </motion.div>
       </div>
       <div className="flex items-center justify-between md:hidden">
         <Link href="/" className="text-2xl font-bold">
@@ -77,7 +67,7 @@ const Navbar = () => {
         }`}
       >
         <div className="mx-2 flex flex-col items-center gap-6 border-t-2 py-4 text-xl">
-          {items.map(({ name, link }) => (
+          {navbarItems.map(({ name, link }) => (
             <Link
               key={name}
               href={link}
