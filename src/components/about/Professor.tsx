@@ -30,7 +30,7 @@ const yPositiveAnimation = {
 const Professor = () => {
   return (
     <div className="mx-8 mb-4 flex flex-col justify-center gap-8 md:flex-row md:items-center">
-      <motion.div {...xPositiveAnimation}>
+      <motion.div {...xNegativeAnimation}>
         <Image
           src={professorImage}
           alt="Professor Watkinson Medina"
@@ -41,7 +41,7 @@ const Professor = () => {
       </motion.div>
 
       <div className="flex-col">
-        <motion.div {...xNegativeAnimation}>
+        <motion.div {...xPositiveAnimation}>
           <motion.p
             {...fadeIn}
             className="font-xl text-left text-lg text-black xl:text-2xl"

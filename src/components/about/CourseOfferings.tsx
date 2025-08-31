@@ -44,12 +44,7 @@ const CourseOfferings = () => {
         <Header text="Course Offerings" />
       </motion.div>
       <div className="w-11/12 flex-col place-items-center py-10 text-center text-base md:w-2/3 lg:text-xl">
-        <motion.div
-          className="pb-4"
-          initial={{ opacity: 0, y: 40, scale: 0.9 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.6 }}
-        >
+        <motion.div className="pb-4" {...textAnimate}>
           Our ULAs are here to support you through office hours, and directly in
           lab sections.
         </motion.div>
