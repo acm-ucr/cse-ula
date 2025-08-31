@@ -41,7 +41,7 @@ const Card = ({ image, name, classes, description }: ulaCardProps) => {
         </div>
       </div>
       <div
-        className="text-md absolute inset-0 flex h-full items-center justify-center rounded-xl border-8 border-ula-yellow-accent px-8 py-4 text-center lg:text-xl"
+        className="text-md absolute inset-0 flex h-full items-center justify-center rounded-xl border-8 border-ula-yellow-accent bg-white px-8 py-4 text-center lg:text-xl"
         style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
       >
         {description}

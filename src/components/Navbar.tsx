@@ -4,6 +4,20 @@ import navbarItems from "@/data/NavbarData";
 import { usePathname } from "next/navigation";
 import { FaDiscord, FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
+import { motion } from "motion/react";
+
+const fadeIn = (delay = 0) => ({
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
+  transition: { duration: 0.5, delay },
+});
+
+const hoverAnimation = {
+  whileHover: { scale: 1.05 },
+  transition: {
+    duration: 0.6,
+  },
+};
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -15,25 +29,29 @@ const Navbar = () => {
     <div className="relative bg-ula-blue-primary p-5 font-medium text-white">
       <div className="hidden w-full items-center justify-between md:flex">
         <div className="mx-5 flex gap-8 text-2xl">
-          {navbarItems.map(({ name, link }) => (
-            <Link
-              key={name}
-              href={link}
-              className={`${
-                pathname === link
-                  ? "text-ula-yellow-accent"
-                  : "hover:text-gray-300"
-              }`}
-            >
-              {name}
-            </Link>
+          {navbarItems.map(({ name, link }, i) => (
+            <motion.div {...fadeIn(i * 0.15)}>
+              <motion.div {...hoverAnimation}>
+                <Link
+                  key={name}
+                  href={link}
+                  className={`${
+                    pathname === link
+                      ? "text-ula-yellow-accent"
+                      : "hover:text-gray-300"
+                  }`}
+                >
+                  {name}
+                </Link>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
-        <div className="mx-5 text-5xl">
+        <motion.div {...hoverAnimation} className="mx-5 text-5xl">
           <Link href="https://discord.com/invite/BUvwNdB6eH" target="_blank">
             <FaDiscord />
           </Link>
-        </div>
+        </motion.div>
       </div>
       <div className="flex items-center justify-between md:hidden">
         <Link href="/" className="text-2xl font-bold">
