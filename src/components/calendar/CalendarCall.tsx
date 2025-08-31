@@ -112,10 +112,10 @@ const CalendarCall = () => {
     queryKey: ["googleCalendarEvents"],
     queryFn: async () => {
       const now = new Date();
-      const tenWeeksAgo = new Date(
+      const fiveWeeksAgo = new Date(
         now.getTime() - 60 * 60 * 24 * 7 * 5 * 1000,
       ).toISOString();
-      const tenWeeksAhead = new Date(
+      const fiveWeeksAhead = new Date(
         now.getTime() + 60 * 60 * 24 * 7 * 5 * 1000,
       ).toISOString();
 
@@ -123,7 +123,7 @@ const CalendarCall = () => {
         calendarSources.map(async ({ id, eventType }) => {
           try {
             const res = await fetch(
-              `https://www.googleapis.com/calendar/v3/calendars/${id}/events?key=${process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY}&singleEvents=true&orderBy=startTime&timeMin=${tenWeeksAgo}&timeMax=${tenWeeksAhead}`,
+              `https://www.googleapis.com/calendar/v3/calendars/${id}/events?key=${process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY}&singleEvents=true&orderBy=startTime&timeMin=${fiveWeeksAgo}&timeMax=${fiveWeeksAhead}`,
             );
 
             if (!res.ok) {
@@ -201,11 +201,11 @@ const CalendarCall = () => {
 
   return (
     <div>
-      <div className="mx-auto my-4 flex w-11/12 flex-col text-nowrap text-center text-4xl font-bold text-ula-blue-primary md:flex-row md:justify-between lg:text-6xl">
+      <div className="my-4 flex w-11/12 flex-col text-nowrap text-center text-4xl font-bold text-ula-blue-primary md:flex-row md:justify-between lg:text-6xl">
         <div className="pb-6 md:pb-0">
           {currentMonth}, {currentYear}
         </div>
-        <div className="flex justify-center rounded-xl border-2 border-black px-2 text-xl text-black">
+        <div className="hidden justify-center rounded-xl border-2 border-black px-2 text-xl text-black md:flex">
           <button
             onClick={() => setIsDay(false)}
             className={`my-1 rounded-lg px-8 py-2 transition-colors duration-200 ${
