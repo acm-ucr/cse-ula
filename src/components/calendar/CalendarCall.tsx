@@ -201,7 +201,7 @@ const CalendarCall = () => {
 
   return (
     <div>
-      <div className="mx-auto my-4 flex w-11/12 flex-col text-nowrap text-center text-6xl font-bold text-ula-blue-primary md:flex-row md:justify-between">
+      <div className="mx-auto my-4 flex w-11/12 flex-col text-nowrap text-center text-4xl lg:text-6xl font-bold text-ula-blue-primary md:flex-row md:justify-between">
         <div className="pb-6 md:pb-0">
           {currentMonth}, {currentYear}
         </div>
