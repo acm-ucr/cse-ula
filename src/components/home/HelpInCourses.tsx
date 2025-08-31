@@ -25,22 +25,22 @@ export default function HelpInCourses() {
       <div className="mt-5 grid grid-cols-1 gap-2 pl-8 text-center font-semibold md:grid-cols-2 md:justify-items-center md:gap-14 md:pl-0 md:text-left md:text-lg">
         <ul className="space-y-2">
           <motion.li {...itemAnimation(0.3)}>✓ Python: CS 9A, 9B, 9C</motion.li>
-          <motion.li {...itemAnimation(0.4)}>
+          <motion.li {...itemAnimation(0.35)}>
             ✓ Software: CS 10A, 10B, 10C
           </motion.li>
-          <motion.li {...itemAnimation(0.5)}>
+          <motion.li {...itemAnimation(0.4)}>
             ✓ Discrete Math: CS 011 / MATH 011
           </motion.li>
         </ul>
 
         <ul className="space-y-2">
-          <motion.li {...itemAnimation(0.6)}>
+          <motion.li {...itemAnimation(0.45)}>
             ✓ Algorithms: CS 111, 141
           </motion.li>
-          <motion.li {...itemAnimation(0.7)}>
+          <motion.li {...itemAnimation(0.5)}>
             ✓ Computer Systems: CS 61
           </motion.li>
-          <motion.li {...itemAnimation(0.8)}>
+          <motion.li {...itemAnimation(0.55)}>
             ✓ Software Construction: CS 100
           </motion.li>
         </ul>
