@@ -4,6 +4,24 @@ import { items } from "@/data/NavbarData";
 import { usePathname } from "next/navigation";
 import { FaDiscord, FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
+import { motion } from "motion/react";
+
+const FadeIn = ({ children, delay = 0 }: { children: React.ReactNode, delay?: number }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.5, delay}}
+      viewport={{ once: true }}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+const hoverEffect = {
+  whileHover: { scale: 1.1, transition: { duration: 0.6 } } ,
+};
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -15,18 +33,22 @@ const Navbar = () => {
     <div className="relative bg-ula-blue-primary p-5 font-medium text-white">
       <div className="hidden w-full items-center justify-between md:flex">
         <div className="mx-5 flex gap-8 text-2xl">
-          {items.map(({ name, link }) => (
-            <Link
-              key={name}
-              href={link}
-              className={`${
-                pathname === link
-                  ? "text-ula-yellow-accent"
-                  : "hover:text-gray-300"
-              }`}
-            >
-              {name}
-            </Link>
+          {items.map(({ name, link}, i) => (
+            <FadeIn delay = {i * 0.15}>
+              <motion.div {...hoverEffect}>
+                <Link
+                  key={name}
+                  href={link}
+                  className={`${
+                    pathname === link
+                      ? "text-ula-yellow-accent"
+                      : "hover:text-gray-300"
+                  }`}
+                >
+                  {name}
+                </Link>
+              </motion.div>
+            </FadeIn>
           ))}
         </div>
         <div className="mx-5 text-5xl">
