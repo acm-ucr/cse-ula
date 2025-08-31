@@ -42,7 +42,7 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({
 
   return (
     <div>
-      <div className="flex w-full flex-col items-center justify-between pb-4 lg:flex-row">
+      <div className="mx-auto flex w-full flex-col items-center justify-between pb-4 lg:flex-row">
         <div className="flex justify-start">
           <ToggleGroup
             type="multiple"
