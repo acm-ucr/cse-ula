@@ -8,9 +8,9 @@ import {
 import moment from "moment";
 import { useQuery } from "@tanstack/react-query";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import CustomToolbar from "@/components/calendar/CustomToolBar";
-import CustomEventPopover from "@/components/calendar/CustomEvent";
-import CustomDayHeader from "@/components/calendar/CustomDayHeader";
+import CustomToolbar from "@/components/calendar/customToolBar";
+import CustomEventPopover from "@/components/calendar/customEvent";
+import CustomDayHeader from "@/components/calendar/customDayHeader";
 
 export function useWindowWidth() {
   const [width, setWidth] = useState(
@@ -79,7 +79,7 @@ export const calendarSources = [
   },
   {
     id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS141,
-    eventType: "CS 141!",
+    eventType: "CS 141",
   },
 ];
 
