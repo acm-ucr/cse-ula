@@ -59,7 +59,7 @@ const Progress = () => {
           </motion.p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 export default Progress;
