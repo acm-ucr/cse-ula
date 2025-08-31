@@ -1,5 +1,7 @@
+import CalendarCall from "@/components/calendar/CalendarCall";
+
 const Calendar = () => {
-  return <div>Calendar</div>;
+  return <CalendarCall />;
 };
 
 export default Calendar;
