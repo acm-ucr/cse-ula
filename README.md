@@ -1,23 +1,21 @@
-# ULA Website
+# UCR ULA Official Website
 
 ![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![TypeScript](https://img.shields.io/badge/typescript-%23407ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![ReactQuery](https://img.shields.io/badge/React_Query-FF4154?style=for-the-badge&logo=react-query&logoColor=white)
-![ShadCN](https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=shadcn/ui&logoColor=white)
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 <br/>
 ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
 ![Prettier](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
-![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
 ## Figma
 
-[ULA Website Figma Design File](https://www.figma.com/design/LzEmjBSlajrsqspHhzO1yw/Spring--25--ULA?node-id=276-1920&t=8nTauB0SFASaJtfi-0)
+[UCR ULA Official Website Figma Design File](https://www.figma.com/file/SOOBKLLIr5N105n6Pz2t2T/ULA-Website?type=design&mode=design&t=WU6yx2XpUb1H05aO-1)
 
 ## Node.js
 
-ULA Website runs on Node.js Version 20.10.0 and higher. Please ensure you have Node.js installed via the [official website](https://nodejs.org/en).
+UCR ULA Official Website runs on Node.js Version 16.17.0 and higher. Please ensure you have Node.js installed via the [official website](https://nodejs.org/en).
 
 ## Next.js
 
@@ -28,7 +26,11 @@ This project is built using [Next.js](https://nextjs.org), a React framework. Ne
 The following environment variables are required and must be stored in an `.env` file:
 
 ```env
-N/A
+NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY=
+NEXT_PUBLIC_GOOGLE_CALENDAR_SOFTWARE=
+NEXT_PUBLIC_GOOGLE_CALENDAR_ALGORITHMS=
+NEXT_PUBLIC_GOOGLE_CALENDAR_COMPUTER_ARCHITECTURE=
+NEXT_PUBLIC_GOOGLE_CALENDAR_SOFTWARE_ENGINEERING=
 ```
 
 ## Commands
