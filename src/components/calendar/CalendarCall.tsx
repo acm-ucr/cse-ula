@@ -54,31 +54,31 @@ export type CalendarEvent = {
 
 export const calendarSources = [
   {
-    id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS009,
+    id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_PYTHON,
     eventType: "CS 009ABC",
   },
   {
-    id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS010,
+    id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_SOFTWARE,
     eventType: "CS 010ABC",
   },
   {
-    id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS011,
+    id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_DISCRETE,
     eventType: "CS 011",
   },
   {
-    id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS061,
+    id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_COMPUTER_ARCHITECTURE,
     eventType: "CS 061",
   },
   {
-    id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS100,
+    id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_SOFTWARE_ENGINEERING,
     eventType: "CS 100",
   },
   {
-    id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS111,
+    id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_DISCRETE_STRUCTURES,
     eventType: "CS 111",
   },
   {
-    id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL_CS141,
+    id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_ALGORITHMS,
     eventType: "CS 141",
   },
 ];
@@ -241,7 +241,7 @@ const CalendarCall = () => {
             titleAccessor="title"
             defaultView={isDay ? Views.DAY : Views.WEEK}
             views={["day", "week"]}
-            min={new Date(1970, 1, 1, 9, 0, 0)}
+            min={new Date(1970, 1, 1, 8, 0, 0)}
             max={new Date(1970, 1, 1, 21, 0, 0)}
             date={date}
             onNavigate={setDate}

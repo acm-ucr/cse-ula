@@ -62,46 +62,46 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({
                 setSelectedClass(types);
               }
             }}
-            className="grid grid-flow-col grid-rows-2 gap-2 pb-4 md:flex md:space-x-2"
+            className="flex w-full flex-wrap md:flex-nowrap"
           >
             <ToggleGroupItem
-              className="flex w-full justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary"
+              className="flex w-1/5 justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary px-8 py-3 text-black data-[state=on]:bg-ula-yellow-primary md:px-3"
               value="CS 009ABC"
             >
               CS 009ABC
             </ToggleGroupItem>
             <ToggleGroupItem
-              className="flex w-full justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary"
+              className="flex w-1/5 justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary px-8 py-3 text-black data-[state=on]:bg-ula-yellow-primary md:px-3"
               value="CS 010ABC"
             >
               CS 010ABC
             </ToggleGroupItem>
             <ToggleGroupItem
-              className="flex w-full justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary"
+              className="flex w-1/5 justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary px-8 py-3 text-black data-[state=on]:bg-ula-yellow-primary md:px-3"
               value="CS 011"
             >
               CS 011
             </ToggleGroupItem>
             <ToggleGroupItem
-              className="flex w-full justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary"
+              className="flex w-1/5 justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary px-8 py-3 text-black data-[state=on]:bg-ula-yellow-primary md:px-3"
               value="CS 061"
             >
               CS 061
             </ToggleGroupItem>
             <ToggleGroupItem
-              className="flex w-full justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary"
+              className="flex w-1/5 justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary px-8 py-3 text-black data-[state=on]:bg-ula-yellow-primary md:px-3"
               value="CS 100"
             >
               CS 100
             </ToggleGroupItem>
             <ToggleGroupItem
-              className="flex w-full justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary"
+              className="flex w-1/5 justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary px-8 py-3 text-black data-[state=on]:bg-ula-yellow-primary md:px-3"
               value="CS 111"
             >
               CS 111
             </ToggleGroupItem>
             <ToggleGroupItem
-              className="flex w-full justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary p-3 text-black data-[state=on]:bg-ula-yellow-primary"
+              className="flex w-1/5 justify-center text-nowrap rounded-md border-2 border-ula-yellow-primary px-8 py-3 text-black data-[state=on]:bg-ula-yellow-primary md:px-3"
               value="CS 141"
             >
               CS 141
@@ -135,7 +135,7 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({
       )}
       {view == "day" && (
         <div
-          className={`text-center text-3xl font-bold text-black ${isToday ? "rounded-md bg-ula-blue-primary text-white" : "rounded-md"}`}
+          className={`text-center text-3xl font-bold text-black ${isToday ? "rounded-md bg-ula-blue-primary text-white" : "rounded-md border-2 border-black"}`}
         >
           {date.toLocaleDateString("en-US", { weekday: "short" }).toUpperCase()}
           <br />
