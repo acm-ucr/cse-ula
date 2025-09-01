@@ -22,7 +22,7 @@ export default function HelpInCourses() {
         <Header text="Do you need help in your CSE courses?" />
       </motion.div>
 
-      <div className="mt-5 grid grid-cols-1 gap-2 pl-8 text-center font-semibold md:grid-cols-2 md:justify-items-center md:gap-14 md:pl-0 md:text-left md:text-lg">
+      <div className="mt-5 grid grid-cols-1 gap-2 pl-8 text-left font-semibold md:grid-cols-2 md:justify-items-center md:gap-14 md:pl-0 md:text-left md:text-lg">
         <ul className="space-y-2">
           <motion.li {...itemAnimation(0.3)}>✓ Python: CS 9A, 9B, 9C</motion.li>
           <motion.li {...itemAnimation(0.35)}>
